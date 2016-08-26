@@ -1,0 +1,120 @@
+<ion-view view-title="我的孩子">
+  <ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+      <button class="button" ng-click="openModal()">添加</button>
+    </div>
+    <ion-title ng-if="studentnow">{{studentnow.name}} {{studentnow.grade.name}}</ion-title>
+    <div class="buttons">
+      <button class="button" ng-click="openStudentSelectModal()" ng-if="students.length>1">切换学生</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <span ng-if="!studentnow">您还没有添加学生信息</span>
+    <ion-list ng-repeat="user in users">
+      <div class="item item-button-right">
+        <label ng-if="user.nickname">
+          {{user.nickname}}
+        </label>
+        <label ng-if="!user.nickname">
+          {{user.name}}
+        </label>
+        (
+        <label ng-repeat="son in user.sons">
+          <span ng-if="">{{son.name}}</span>
+        </label>
+        的
+        <label>{{user.roles[0].role.name}}</label>)
+        <button class="button" ng-click="chatWithUser('{{user._id}}','{{user.name}}')"><i class="icon ion-ios-chatbubble"></i></button>
+      </div>
+    </ion-list>
+    <!--
+    <div class="list card" ng-repeat="student in students">
+      <div class="item item-avatar">
+        <img ng-src="http://127.0.0.1:3000/{{student.image}}" ng-if="student.image">
+        <img src="../../img/avata_128.jpg" ng-if="!student.image">
+        <h2>{{student.name}}</h2>
+        <p>{{student.grade.name}}</p>
+      </div>
+      <div class="item item-body">
+        <p>
+          <a class="subdued">编辑学生信息</a>
+          <a class="subdued" ng-click="showChatModal('{{student._id}}')">联系人</a>
+        </p>
+      </div>
+    </div>
+    -->
+  </ion-content>
+
+  <script id="templates/modal_children_add.html" type="text/ng-template">
+    <ion-modal-view>
+      <form role="form" name="studentForm" novalidate>
+        <ion-header-bar align-title="center" class="bar-stable">
+          <div class="buttons">
+            <button class="button" ng-click="modal.hide()">取消</button>
+          </div>
+          <h1 class="title">{{student.title}}</h1>
+          <div class="buttons">
+            <button class="button button-energized" ng-disabled="studentForm.$invalid" ng-click="save()" >保存</button>
+          </div>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input m10">
+              <input type="hidden" ng-model="student._id">
+              <label class="input-label">姓名</label>
+              <input type="text" placeholder="不少于6个字符" required ng-minlength="6" name="name" ng-model="student.name">
+              <i class="ion-close-round pr10 red" ng-show="studentForm.name.$dirty && studentForm.name.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="studentForm.name.$dirty && studentForm.name.$valid"></i>
+            </label>
+
+            <label class="item item-input item-select m10">
+              <label class="input-label placeholder-icon">性别</label>
+              <select name="sex" class="dist" ng-model="student.sex" required>
+                <option value="0">女</option>
+                <option value="1">男</option>
+              </select>
+              <i class="ion-close-round pr10 red" ng-show="studentForm.sex.$dirty && studentForm.sex.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="studentForm.sex.$dirty && studentForm.sex.$valid"></i>
+            </label>
+            <label class="item item-input m10">
+              <label class="input-label placeholder-icon">年龄</label>
+              <input type="number" placeholder="输入年龄" required name="age"  id="age" ng-model="student.age">
+              <i class="ion-close-round pr10 red" ng-show="studentForm.age.$dirty && studentForm.age.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="studentForm.age.$dirty && studentForm.age.$valid"></i>
+            </label>
+            <label class="item item-input m10" ng-click="selectschool()" >
+              <label class="input-label">所在学校</label>
+              <input type="text" placeholder="点击选择" required name="school"  id="school" ng-model="orgnow.sname">
+              <i class="ion-close-round pr10 red" ng-show="studentForm.school.$dirty && studentForm.school.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="studentForm.school.$dirty && studentForm.school.$valid"></i>
+            </label>
+            <label class="item item-input m10" ng-click="selectgrade()">
+              <label class="input-label">所在班级</label>
+              <input type="text" placeholder="点击选择" required name="grade" id="grade" ng-model="orgnow.gname">
+              <i class="ion-close-round pr10 red" ng-show="studentForm.grade.$dirty && studentForm.grade.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="studentForm.grade.$dirty && studentForm.grade.$valid"></i>
+            </label>
+          </div>
+        </ion-content>
+      </form>
+    </ion-modal-view>
+  </script>
+
+  <script id="templates/modal_student_select.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+          <button class="button" ng-click="modal_Student_Select.hide()">取消</button>
+        </div>
+      </ion-header-bar>
+      <ion-content>
+        <ion-item ng-repeat="student in students" ng-click="select_student('{{student._id}}')">
+          {{student.name}} {{student.school.name}} {{student.grade.name}}
+        </ion-item>
+      </ion-content>
+
+    </ion-modal-view>
+  </script>
+
+
+</ion-view>

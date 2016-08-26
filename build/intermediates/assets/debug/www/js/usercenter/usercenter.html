@@ -1,0 +1,64 @@
+<ion-view view-title="个人中心">
+  <ion-content>
+    <div class="avatar-bg">
+      <img class="avatar" src="" ng-if="user.image" ng-model="user.image" >
+      <img class="avatar" src="../../img/avata_128.jpg" ng-if="!user.image" >
+      <h3 class="username" ng-if="user" ng-model="user.name">
+        {{user.name}}
+      </h3>
+      <a href="/#/edit_userinfo" ng-if="user">
+        <i class="ion-ios-compose-outline"></i>
+        <h5 class="intro" ng-if="user.intro">
+          {{user.intro}}
+        </h5>
+        <h5 class="intro" ng-if="!user.intro">
+          这家伙很懒，什么都没留下
+        </h5>
+      </a>
+      <a  ng-click="goLogin()" ng-if="!user" class="login">登录</a>
+    </div>
+
+    <ion-list class="fun_list">
+      <a class="item item-icon-left" href="#">
+          <i class="icon ion-ios-email-outline"></i>
+          消息中心
+      </a>
+      <a class="item-icon-left item" href="/#/login" ng-if="!user">
+          <i class="icon ion-ios-people-outline"></i>
+          我的组织
+      </a>
+      <a class="item-icon-left item" href="/#/school/list"  ng-if="user.isPresident">
+        <i class="icon ion-ios-people-outline"></i>
+        我的组织
+      </a>
+      <a class="item-icon-left item" href="/#/grade/list" ng-if="user&&!user.isPresident">
+        <i class="icon ion-ios-people-outline"></i>
+        我的组织
+      </a>
+      <ion-item class="item-icon-left">
+        <a href="#">
+          <i class="icon ion-ios-paw-outline"></i>
+          我的孩子
+        </a>
+      </ion-item>
+      <ion-item class="item-icon-left">
+        <a href="#">
+          <i class="icon ion-ios-cart-outline"></i>
+          SF商城
+        </a>
+      </ion-item>
+      <ion-item class="item-icon-left">
+        <a href="#">
+          <i class="icon ion-ios-gear-outline"></i>
+          设置
+        </a>
+      </ion-item>
+      <ion-item>
+        <button class="button button-assertive button-full" ng-click="logout()">
+          退出
+        </button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

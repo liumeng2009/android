@@ -1,0 +1,35 @@
+<ion-modal-view>
+  <ion-header-bar>
+
+  </ion-header-bar>
+  <ion-content>
+    <form role="form" name="regForm" novalidate>
+      <div class="list list-inset">
+        <label class="item item-input m10">
+          <i class="padding icon ion-ios-person-outline"></i>
+          <input type="text" placeholder="请输入6-12位的用户名 ..." required ng-minlength="6" ng-maxlength="12" ng-model="user.username" name="username" id="username">
+          <i class="ion-close-round padding red" ng-show="regForm.username.$dirty && regForm.username.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="regForm.username.$dirty && regForm.username.$valid"></i>
+        </label>
+        <label class="item item-input m10">
+          <i class="padding icon ion-ios-unlocked-outline"></i>
+          <input type="password" placeholder="请输入6-18位的密码 ..." required ng-minlength="6" ng-maxlength="18" ng-model="user.password" name="password" id="password">
+          <i class="ion-close-round padding red" ng-show="regForm.password.$dirty && regForm.password.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="regForm.password.$dirty && regForm.password.$valid"></i>
+        </label>
+        <label class="item item-input m10">
+          <i class="padding icon ion-ios-unlocked-outline"></i>
+          <input type="password" placeholder="请确认密码 ..." required ng-minlength="6" ng-maxlength="18" ng-model="user.comparePassword" name="comparePassword" id="comparePassword">
+          <i class="ion-close-round padding red" ng-show="regForm.comparePassword.$dirty && regForm.comparePassword.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="regForm.comparePassword.$dirty && regForm.comparePassword.$valid"></i>
+        </label>
+        <div class="m10">
+          <a href="/#/login">已经有账号？</a>
+        </div>
+        <button class="button button-full button-positive" ng-click="doRegister()" ng-disabled="regForm.$invalid">
+          注册
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

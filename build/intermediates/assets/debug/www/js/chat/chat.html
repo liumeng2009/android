@@ -1,0 +1,70 @@
+<ion-view>
+  <ion-header-bar align-title="center">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="goMain()">
+
+    </button>
+    <ion-title>
+      {{touser.name}}
+      <span ng-if="touser.online" class="chat-avatar">
+      </span>
+      <span ng-if="!touser.online" class="chat-avatar-gray">
+      </span>
+    </ion-title>
+  </ion-header-bar>
+  <ion-content style="background-color: #f8f8f8"  delegate-handle="chatScroll">
+    <input id="from" type="hidden" ng-value="from" >
+    <input id="to" type="hidden" ng-value="to" >
+    <ion-list id="incomingChatMessages">
+      <div class="list-per" ng-repeat="message in messages" >
+        <table style="width:100%" class="{{message.type}}" ng-if="message.type==='to'">
+          <tr>
+            <td style="vertical-align: top;width:60px;">
+              <div class="user">
+                <img class="avatar" ng-src="message.to.image" ng-if="message.image">
+                <img class="avatar" src="../../img/avata_128.jpg" ng-if="!message.image">
+                <span>{{message.username}}</span>
+              </div>
+            </td>
+            <td style="vertical-align: top;word-break: break-all">
+              <div class="chat">
+                <span>
+                  {{message.mess}}<br>
+                </span>
+                <label>{{message.createAt|mydate}}</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%"  class="{{message.type}}" ng-if="message.type==='from'">
+          <tr>
+            <td style="vertical-align: top;word-break: break-all">
+              <div class="chat">
+                <span>
+                  {{message.mess}}<br>
+                </span>
+                <label>{{message.createAt|mydate}}</label>
+              </div>
+            </td>
+            <td style="vertical-align: top;width:60px;">
+              <div class="user">
+                <img class="avatar" ng-src="message.to.image" ng-if="message.image">
+                <img class="avatar" src="../../img/avata_128.jpg" ng-if="!message.image">
+                <span>{{message.username}}</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar>
+      <form role="form" name="chatForm" class="item-input-inset" style="width:100%">
+        <label class="item-input-wrapper">
+          <input style="width:100%" type="text" id="outgoingChatMessage" placeholder="输入信息 ..." ng-value="sendMessage" ng-model="sendMessage" required>
+        </label>
+        <button type="submit" class="button button-balanced" ng-click="send()" ng-disabled="chatForm.$invalid">
+          发送
+        </button>
+      </form>
+  </ion-footer-bar>
+</ion-view>

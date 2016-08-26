@@ -1,0 +1,325 @@
+/* Empty. Add your own CSS if you like */
+@basecolor:#387ef5;
+.red{
+  color:rgb(255,0,0);
+}
+.green{
+  color:rgb(0,255,0);
+}
+.blue{
+  color:#387ef5;
+}
+.m10{
+  margin: 10px;
+}
+.noborder{
+  border:none !important;
+}
+.pr10{
+  padding-right:10px;
+}
+.avatar-bg{
+  height:175px;
+  background: url(../img/avatar-bg.jpg) no-repeat center center;
+  position:relative;
+  text-align: center;
+  .avatar{
+    width:80px;
+    height:80px;
+    border-radius: 100%;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .username{
+    color:#fff;
+    position: relative;
+    z-index: 2;
+    margin:0px;
+  }
+  i{
+    color:#fff;
+    font-size:20px;
+    position:relative;
+    z-index:2;
+  }
+  .intro{
+    color:#fff;
+    font-size:12px;
+    position:relative;
+    z-index:2;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+  }
+  .login{
+    display: block;
+    color:#fff;
+    text-align: center;
+    font-size:16px;
+    font-weight:bolder;
+    position:relative;
+    z-index:2;
+    text-decoration: none;
+  }
+
+}
+.avatar-bg:after{
+  content:'';
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100%;
+  z-index:1;
+  background-color: #000;
+  opacity: 0.3;
+  top:0px;
+}
+.user_achieve_num{
+  border-bottom:#f8f8f8 1px solid;
+  .col-25{
+    height:44px;
+    padding:5px 0px;
+    border-right:#f8f8f8 1px solid;
+    text-align: center;
+    a{
+      text-decoration: none;
+      p{
+        text-decoration: none;
+        color:#111;
+        text-align: center;
+        margin:0px;
+        line-height:17px;
+      }
+    }
+
+  }
+}
+.fun_list{
+  .item{
+    a{
+      color:#111;
+      text-decoration: none;
+    }
+  }
+  i.icon{
+    color:@basecolor;
+  }
+}
+.bar-positive{
+  .button{
+    background-color: transparent;
+    border:none;
+  }
+}
+
+#incomingChatMessages{
+  .list-per{
+    float:left;
+    width:100%;
+    padding:10px;
+  }
+  li:after{
+    clear:both;
+  }
+  table.to{
+    padding:10px;
+    .user{
+      width:60px;
+      float:left;
+      text-align: center;
+      img{
+        width:48px;
+        height:48px;
+      }
+      span{
+        width:70px;
+        text-align: center;
+        word-wrap: initial;
+      }
+    }
+    .chat{
+      float:left;
+      margin-left: 10px;
+      max-width:80%;
+      span{
+        display:block;
+        width:auto;
+        height:auto;
+        padding:10px;
+        line-height:20px;
+        border-radius: 10px;
+        background-color: #fff;
+        position:relative;
+        font-size:14px;
+      }
+      label{
+        color:#999;
+        float:left;
+      }
+      span:before{
+        content:'';
+        position:absolute;
+        top:10px;
+        left:-25px;
+        border-right:15px #fff solid;
+        border-left:15px transparent solid;
+        border-top:10px transparent solid;
+        border-bottom:10px transparent solid;
+      }
+    }
+
+  }
+  table.from{
+    padding:10px;
+    .user{
+      width:60px;
+      float:right;
+      text-align: center;
+      img{
+        width:48px;
+        height:48px;
+      }
+      span{
+        width:70px;
+        text-align: center;
+        word-wrap: initial;
+      }
+    }
+    .chat{
+      float:right;
+      margin-right: 10px;
+      max-width:80%;
+      span{
+        display:block;
+        width:auto;
+        height:auto;
+        padding:10px;
+        line-height:20px;
+        border-radius: 10px;
+        background-color:#33cd5f;
+        color:#000;
+        position:relative;
+        font-size:14px;
+      }
+      label{
+        color:#999;
+        float:right;
+      }
+      span:before{
+        content:'';
+        position:absolute;
+        top:10px;
+        right:-25px;
+        border-left:15px #33cd5f solid;
+        border-right:15px transparent solid;
+        border-top:10px transparent solid;
+        border-bottom:10px transparent solid;
+      }
+    }
+  }
+}
+
+#mainlist{
+  .item{
+    padding:10px;
+    background-color: #fefefe;
+    .offline{
+      img{
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray;
+      }
+
+    }
+    img{
+      width:72px;
+      height:72px;
+      float:left;
+      border:#eeeeee 1px solid;
+      box-shadow: 1px 1px 1px #ccc;
+    }
+    .new{
+      position:absolute;
+      width:auto;
+      padding:0px 6px;
+      height:20px;
+      border-radius: 12px;
+      color:#fff;
+      background-color:lighten(red,15%);
+      text-align: center;
+      right:10px;
+      bottom:25px;
+      font-size:14px;
+      line-height:20px;
+    }
+    .right{
+      margin-left: 15px;
+      .name{
+        margin-left: 70px;
+        font-size: 20px;
+        color:#000;
+        line-height: 36px;
+        position:relative;
+        .date{
+          float:right;
+          font-size:12px;
+          color:#8f8f8f;
+          line-height:40px;
+          position:absolute;
+          top:0px;
+          right:0px;
+        }
+      }
+      .content{
+        margin-left: 70px;
+        font-size:14px;
+        color:#8f8f8f;
+      }
+    }
+  }
+}
+
+.chat-avatar{
+  width:12px;
+  height:12px;
+  background-color:lighten(green,10%);
+  border-radius: 100%;
+  display: inline-block;
+}
+.chat-avatar-gray{
+  width:12px;
+  height:12px;
+  background-color:#ccc;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.login-logo{
+  height:120px;
+  padding:38px 0px 0px 0px;
+  text-align: center;
+  img{
+    width:72px;
+    height:72px;
+  }
+}
+
+.icon-seepassword{
+  right:0px;
+  width:42px;
+  height:42px;
+  font-size:30px;
+  font-weight: bolder;
+  text-align: center;
+  top:70px;
+  position:absolute;
+  z-index:2;
+  background-color: transparent;
+  line-height:42px;
+  color:#33cd5f;
+}
+

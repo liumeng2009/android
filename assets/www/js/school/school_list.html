@@ -1,0 +1,78 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-stable">
+    <div class="buttons">
+      <button class="button button-icon icon ion-ios-arrow-left" ng-click="goUsercenter()"></button>
+    </div>
+    <h1 class="title">学校列表</h1>
+    <div class="buttons">
+      <button class="button" ng-click="openModal()">新增</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <a class="item item-thumbnail-left" ng-click="openModal('{{school._id}}')" ng-repeat="school in schools">
+        <img src="../../img/avata_128.jpg" ng-if="!school.image">
+        <img src="http://127.0.0.1:3000/{{school.image}}" ng-if="school.image">
+        <h2>{{school.name}}</h2>
+        <p>{{school.owner.nickname}}</p>
+      </a>
+    </div>
+  </ion-content>
+  <script id="templates/modal_add.html" type="text/ng-template">
+    <ion-modal-view>
+      <form role="form" name="schoolForm" novalidate>
+      <ion-header-bar align-title="center" class="bar-stable">
+        <div class="buttons">
+          <button class="button" ng-click="modal.hide()">取消</button>
+        </div>
+        <h1 class="title">{{school.title}}</h1>
+        <div class="buttons">
+          <button class="button button-energized" ng-disabled="schoolForm.$invalid" ng-click="save()" >保存</button>
+        </div>
+      </ion-header-bar>
+      <ion-content>
+          <div class="list" id="city{{school._id}}">
+            <label class="item item-input m10">
+              <i class="icon ion-ios-home-outline placeholder-icon"></i>
+              <input type="hidden" ng-model="school._id">
+              <input type="text" placeholder="不小于6个字符的学校名称" required ng-minlength="6" name="name" ng-model="school.name">
+              <i class="ion-close-round pr10 red" ng-show="schoolForm.name.$dirty && schoolForm.name.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="schoolForm.name.$dirty && schoolForm.name.$valid"></i>
+            </label>
+            <label class="item item-input item-select m10">
+              <i class="icon ion-ios-location-outline placeholder-icon"></i>
+              <label class="input-label placeholder-icon">省/直辖市</label>
+              <select name="province" class="prov" ng-model="school.province">
+
+              </select>
+              <i class="ion-close-round pr10 red" ng-show="schoolForm.province.$dirty && schoolForm.province.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="schoolForm.province.$dirty && schoolForm.province.$valid"></i>
+            </label>
+            <label class="item item-input item-select m10">
+              <label class="input-label placeholder-icon">市</label>
+              <select name="city" class="city" ng-model="school.city" required>
+
+              </select>
+              <i class="ion-close-round pr10 red" ng-show="schoolForm.city.$dirty && schoolForm.city.$invalid"></i>
+              <i class="ion-checkmark-round pr10 green" ng-show="schoolForm.city.$dirty && schoolForm.city.$valid"></i>
+            </label>
+            <label class="item item-input item-select m10">
+              <label class="input-label placeholder-icon">区/县</label>
+              <select name="country" class="dist" ng-model="school.country">
+
+              </select>
+            </label>
+            <label class="item item-input m10">
+              <textarea placeholder="详细地址" name="address" id="address" ng-model="school.address" rows="3"></textarea>
+            </label>
+            <label class="item item-input m10">
+              <textarea placeholder="描述" name="intro" id="intro" ng-model="school.intro" rows="3"></textarea>
+            </label>
+          </div>
+      </ion-content>
+      </form>
+    </ion-modal-view>
+  </script>
+</ion-view>
+
+

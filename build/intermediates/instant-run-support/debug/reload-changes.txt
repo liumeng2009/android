@@ -1,0 +1,8 @@
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$1$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$2$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$5$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$4$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$6$override.class
+CHANGED,F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\meng\plugin\pushservice\ChatService$3$override.class

@@ -1,0 +1,49 @@
+<ion-view view-title="SFProject">
+  <div class="bar bar-header bar-stable">
+    <h1 class="title">SFPROJECT</h1>
+    <button class="button button-icon icon ion-ios-compose-outline pull-right" ng-click="modal.show()">
+
+    </button>
+  </div>
+  <ion-content class="padding">
+    <h2>社区模块，所有的users可以发布微博</h2>
+  </ion-content>
+</ion-view>
+
+<script id="templates/modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-stable">
+      <h1 class="title">分享</h1>
+      <button class="button" ng-click="modal.hide()">取消</button>
+      <button class="button button-energized" ng-click="send()">发送</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+      <div class="list">
+        <label class="item item-input noborder">
+          <textarea ng-model="weibo.content" rows="8" placeholder="分享新鲜事...">
+
+          </textarea>
+        </label>
+        <label class="item item-input noborder">
+          <div class="row">
+            <div class="col-20">
+              <a class="icon button ion-ios-star-outline" style="color:#ffc900"></a>
+            </div>
+            <div class="col-20">
+              <a class="icon button ion-ios-videocam-outline" style="color:#ffc900"></a>
+            </div>
+            <div class="col-20">
+              <a class="icon button ion-ios-mic-outline" style="color:#ffc900"></a>
+            </div>
+            <div class="col-20">
+              <a class="icon button ion-ios-location-outline" style="color:#ffc900"></a>
+            </div>
+            <div class="col-20">
+
+            </div>
+          </div>
+        </label>
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

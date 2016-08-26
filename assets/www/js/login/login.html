@@ -1,0 +1,65 @@
+<ion-view view-title="请登录">
+  <ion-content>
+
+    <div class="login-logo">
+      <img ng-src="img/logo_86x86.png">
+    </div>
+
+    <form role="form" name="loginForm" novalidate>
+      <div class="list list-inset">
+        <label class="item item-input m10">
+          <input type="text" placeholder="请输入用户名 ..." required name="username" id="username" ng-model="user.username">
+          <i class="ion-close-round padding red" ng-show="loginForm.username.$dirty && loginForm.username.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="loginForm.username.$dirty && loginForm.username.$valid"></i>
+        </label>
+        <label class="item item-input m10">
+          <input type="password" placeholder="请输入密码 ..." required name="password" ng-model="user.password">
+          <i class="ion-close-round padding red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="loginForm.password.$dirty && loginForm.password.$valid"></i>
+        </label>
+        <button class="button button-full button-balanced" ng-disabled="loginForm.$invalid" ng-click="doLogin()">
+          登录
+        </button>
+        <div class="row padding">
+          <div class="col col-30" style="text-align: left">
+            <a ng-click="showReg()" style="text-decoration: none">新用户注册</a>
+          </div>
+          <div class="col col-30" style="text-align: right">
+            <a ng-click="showFind()" style="text-decoration: none">忘记密码</a>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </ion-content>
+  <script id="templates/reg.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar class="bar-stable">
+        <button class="button button-icon icon ion-ios-arrow-left" ng-click="hideReg()">注册新用户</button>
+      </ion-header-bar>
+      <ion-content>
+        <form role="form" name="regForm" novalidate>
+        <div class="list list-inset">
+          <label class="item item-input m10">
+          <input type="text" placeholder="请输入用户名" ng-focus="regStart" required ng-minlength="6" ng-maxlength="12" ng-model="user.username" name="username" id="username">
+          <i class="ion-close-round padding red" ng-show="regForm.username.$dirty && regForm.username.$invalid"></i>
+          <i class="ion-checkmark-round padding green" ng-show="regForm.username.$dirty && regForm.username.$valid"></i>
+          </label>
+          <label class="item item-input m10" ng-if="!seePassword">
+            <input type="password" placeholder="请输入密码" required ng-model="user.password" name="password" id="password">
+
+          </label>
+          <label class="item item-input m10" ng-if="seePassword">
+            <input type="text"  ng-model="user.password" name="comparePassword" id="comparePassword">
+          </label>
+          <i class=" icon ion-ios-eye-outline icon-seepassword" ng-if="!seePassword" ng-click="changeSeePassword()"></i>
+          <i class=" icon ion-ios-eye icon-seepassword" ng-if="seePassword" ng-click="changeSeePassword()"></i>
+          <button class="button button-full button-balanced" ng-click="doRegister()" ng-disabled="regForm.$invalid">
+            注册
+          </button>
+          </div>
+          </form>
+      </ion-content>
+      </ion-modal-view>
+  </script>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="青青晓园">
+  <ion-header-bar class="bar-stable">
+    <ion-title>晓园</ion-title>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list id="mainlist">
+      <ion-item ng-repeat="chat in chats" ng-click="chatwidth('{{chat.id}}','{{chat.name}}')">
+        <label ng-if="chat.online" class="">
+          <img ng-src="chat.to.image" ng-if="chat.to.image">
+          <img ng-src="../../img/avata_128.jpg" ng-if="!chat.to.image">
+        </label>
+        <label ng-if="!chat.online" class="offline">
+          <img ng-src="chat.to.image" ng-if="chat.to.image">
+          <img ng-src="../../img/avata_128.jpg" ng-if="!chat.to.image">
+        </label>
+
+        <div class="new" ng-if="chat.new">{{chat.content.length| mynum}}</div>
+        <div class="right">
+          <div class="name">
+            {{chat.name}}
+            <div class="date">
+              {{chat.createAt | mydate}}
+            </div>
+          </div>
+          <p class="content">{{chat.content[0]}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
