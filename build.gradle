@@ -253,6 +253,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES END
     compile 'com.android.support:appcompat-v7:21.0.+'
     compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'org.greenrobot:eventbus:3.0.0'
     compile('io.socket:socket.io-client:0.7.0') {
       exclude group: 'org.json', module: 'json'
     }

@@ -10,8 +10,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,6 +22,8 @@ import com.ionicframework.testtpl199249.R;
 import io.socket.client.IO;
 import io.socket.client.On;
 import io.socket.emitter.Emitter;
+
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,20 +37,21 @@ import io.socket.client.Socket;
 
 public class ChatService extends Service {
 
+
     public static final String TAG="ChatService";
     static final int NOTIFICATION_ID=0x123;
     NotificationManager nm;
 
     private Socket mSocket;
     private SQLiteDatabase db;
-    private String username;
-    private String _id;
+    private String username="dreams";
+    private String _id="";
     boolean isConnect=false;
 
     @Override
     public void onCreate(){
       super.onCreate();
-      Log.d(TAG, "onCreate() executed");
+      Log.d(TAG, "onCreate() executed11111111111111"+this.getFilesDir().toString());
       db=SQLiteDatabase.openOrCreateDatabase(this.getFilesDir().toString()+"/sfDB.db3",null);
       //ChatApplication app = (ChatApplication) getApplication();
       //mSocket = app.getSocket();
@@ -59,32 +64,37 @@ public class ChatService extends Service {
 
     @Override
     public int onStartCommand(Intent intent,int flags,int startId){
-      Log.d(TAG, "onStartCommand() executed");
+      Log.d(TAG, "onStartCommand() executed222222222222222222");
       //数据库中找到当前激活的账户
-      Cursor cursor=db.query("users",new String[]{"_id","name"},"active=?",new String[]{"1"},null,null,null);
-      if(cursor.getCount()>0) {
-        cursor.moveToFirst();
-        username = cursor.getString(1);
-        _id = cursor.getString(0);
-        JSONObject json = new JSONObject();
-        try {
-          json.put("name", username);
-          json.put("_id", _id);
-          mSocket.emit("login", json);
-        } catch (JSONException e) {
-          e.printStackTrace();
+      if(!isConnect) {
+        Cursor cursor = db.query("users", new String[]{"_id", "name"}, "active=?", new String[]{"1"}, null, null, null);
+        //Log.v(TAG,getString(cursor.getCount()));
+        if (cursor.getCount() > 0) {
+          cursor.moveToFirst();
+          username = cursor.getString(1);
+          _id = cursor.getString(0);
+          JSONObject json = new JSONObject();
+          try {
+            json.put("name", username);
+            json.put("_id", _id);
+            Log.v("TAG", username);
+            Log.v("TAG", _id);
+            mSocket.emit("login", json);
+          } catch (JSONException e) {
+            e.printStackTrace();
+          }
+          mSocket.on(Socket.EVENT_CONNECT, onConnect);
+          mSocket.on(Socket.EVENT_RECONNECT, onReConnect);
+          mSocket.on(Socket.EVENT_DISCONNECT, onDisconnect);
+          mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
+          mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+          mSocket.on("message", onReceiveMessage);
+          //EventBus.getDefault().register(this);
+          mSocket.connect();
+        } else {
+          //数据库里面不存在这个用户
+          Log.v(TAG, "不监听");
         }
-        mSocket.on(Socket.EVENT_CONNECT, onConnect);
-        mSocket.on(Socket.EVENT_RECONNECT, onReConnect);
-        mSocket.on(Socket.EVENT_DISCONNECT, onDisconnect);
-        mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-        mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
-        mSocket.on("message", onReceiveMessage);
-        mSocket.connect();
-      }
-      else{
-        //数据库里面不存在这个用户
-        Log.v(TAG,"不监听");
       }
       //heart beat
       //return super.onStartCommand(intent, flags, startId);
@@ -103,16 +113,36 @@ public class ChatService extends Service {
         mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectTimeOut);
         mSocket.off("to"+_id,onReceiveMessage);
 
+      //发送广播，说明这个服务被关闭了
+
+
     }
 
     @Override
-    public IBinder onBind(Intent intent) {
+    public IBinder onBind(Intent intent){
         // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+      //return myBinder;
+      throw new UnsupportedOperationException("Not yet implemented");
     }
+
+    public class EventChangeChatServerStateEvent{
+
+    }
+
     private Emitter.Listener onConnect = new Emitter.Listener() {
         @Override
         public void call(Object... args) {
+          /*
+          new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+              EventBus.getDefault().post(
+                new EventChangeChatServerStateEvent(EventChangeChatServerStateEvent.chatServerState.connectedToSocket)
+              );
+            }
+          });
+          */
+
           Log.v(TAG,"连接了");
           isConnect=true;
           //只要连接成功就发送一个带有名字的请求

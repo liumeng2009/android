@@ -78,13 +78,13 @@ public class ProgressDialogPlugin extends CordovaPlugin {
             db.endTransaction();
             //db.close();
             //启动服务
-            Intent intent =new Intent(cordova.getActivity(),ChatService.class);
+            //Intent intent =new Intent(cordova.getActivity(),ChatService.class);
             //intent.putExtra("username",message.getString("name"));
             //intent.putExtra("_id",message.getString("_id"));
             //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             //登录部分，重新启动service
-            cordova.getActivity().stopService(intent);
-            cordova.getActivity().startService(intent);
+            //cordova.getActivity().stopService(intent);
+            //cordova.getActivity().startService(intent);
             return true;
         }
         return false;
