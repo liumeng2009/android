@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','starter.filters','starter.directives','ionic-native-transitions'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$SFTools) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,18 +20,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+  });
+  TIME_SPACING=5;
+  iosocket='';
+  token='';
+  $SFTools.getToken(function(_token){
+    if(_token&&_token.userid&&_token!='') {
+      iosocket = io.connect('http://liumeng.iego.cn/', {'reconnect': true});
+      iosocket.on('connect', function () {
+        console.log('连接了，不知道是重新连还是直接连，username是' + _token.name + ',_id是' + _token.userid);
+        if (_token.name != '' && _token.userid != '') {
+          iosocket.emit('login', {
+            name: _token.name,
+            _id: _token.userid,
+            type: 'page'
+          });
+        }
+      });
+    }
+    else{
 
-    //iosocket = io.connect('http://liumeng.iego.cn/',{'reconnect':true,'force new connection': true});
-
-
-
+    }
   });
 })
 
 .config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$sceDelegateProvider,$ionicNativeTransitionsProvider) {
 
   $ionicNativeTransitionsProvider.setDefaultOptions({
-    duration: 400, // in milliseconds (ms), default 400,
+    duration: 200, // in milliseconds (ms), default 400,
     slowdownfactor: 4, // overlap views (higher number is more) or no overlap (1), default 4
     iosdelay: -1, // ms to wait for the iOS webview to update before animation kicks in, default -1
     androiddelay: -1, // same as above but for Android, default -1
@@ -124,7 +140,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'js/usercenter/tabs.html'
+    templateUrl: 'js/usercenter/tabs.html',
+    controller:'TabCtrl'
   })
 
   // Each tab has its own nav history stack:
@@ -166,11 +183,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
       controller:'SchoolListCtrl'
     })
     .state('chat',{
-      url:'/chat',
-      cache:false,
+      url:'/chat/:userid/:username',
       templateUrl:'js/chat/chat.html',
-      controller:'ChatCtrl',
-      params:{'from':null,'to':null}
+      controller:'ChatCtrl'
     })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/main');

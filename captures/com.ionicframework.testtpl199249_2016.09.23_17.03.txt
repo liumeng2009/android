@@ -1,0 +1,47 @@
+Applications Memory Usage (kB):
+Uptime: 24488173 Realtime: 33064313
+
+** MEMINFO in pid 11407 [com.ionicframework.testtpl199249] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     3731     3704        0        0     7936     6707     1228
+  Dalvik Heap     3362     3304        0        0    31996    15751    16245
+ Dalvik Other      621      620        0        0                           
+        Stack      256      256        0        0                           
+       Ashmem      128      128        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap      596      140      160        0                           
+    .apk mmap     5333       64     2952        0                           
+    .dex mmap     2231       96     1560        0                           
+    .oat mmap     1108        0      260        0                           
+    .art mmap     2601     2460        8        0                           
+   Other mmap      273       12      164        0                           
+      Unknown     1532     1532        0        0                           
+        TOTAL    21776    12316     5108        0    39932    22458    17473
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     5772
+         Native Heap:     3704
+                Code:     5232
+               Stack:      256
+            Graphics:        0
+       Private Other:     2460
+              System:     4352
+ 
+               TOTAL:    21776      TOTAL SWAP (KB):        0
+ 
+ Objects
+               Views:        9         ViewRootImpl:        0
+         AppContexts:        2           Activities:        1
+              Assets:        6        AssetManagers:        2
+       Local Binders:       10        Proxy Binders:       17
+       Parcel memory:        3         Parcel count:       16
+    Death Recipients:        1      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

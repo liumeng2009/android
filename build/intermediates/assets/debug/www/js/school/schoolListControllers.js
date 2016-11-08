@@ -2,41 +2,28 @@
  * Created by Administrator on 2016/7/11.
  */
 angular.module('schoolListControllers',[])
-  .controller('SchoolListCtrl',['$scope','$rootScope','$ionicModal','$state','$schoolData','$ionicLoading','$ionicPopup','$timeout','$window',function($scope,$rootScope,$ionicModal,$state,$schoolData,$ionicLoading,$ionicPopup,$timeout,$window){
+  .controller('SchoolListCtrl',['$scope','$rootScope','$ionicModal','$state','$schoolData','$ionicLoading','$ionicPopup','$timeout','$window','$SFTools',function($scope,$rootScope,$ionicModal,$state,$schoolData,$ionicLoading,$ionicPopup,$timeout,$window,$SFTools){
     //页面加载时，载入list数据
-    $scope.$on('$ionicView.afterEnter',function(){
-      $ionicLoading.show({
-        delay:200
+    $scope.$on('$ionicView.enter',function(){
+      $SFTools.getToken(function(_token){
+        if(_token&&_token.userid&&_token!=''){
+          $schoolData.list({token:_token.token})
+            .success(function(data){
+              if(data.success === 0){
+                $SFTools.myToast(data.msg);
+              }else{
+                $scope.schools=data.schools;
+              }
+            })
+            .error(function(){
+              $SFTools.myToast('网络连接错误');
+            });
+        }
+        else{
+          $state.go('login');
+        }
       });
-      var token=$window.localStorage.accesstoken;
-      if(token){
-        $schoolData.list({token:token})
-          .success(function(data){
-            $ionicLoading.hide();
-            if(data.success === 0){
-              $scope.showErrorMesPopup(data.msg);
-            }else{
-              $scope.schools=data.schools;
-            }
-          })
-          .error(function(){
-            $ionicLoading.hide();
-            $scope.showErrorMesPopup('网络连接错误');
-          });
-      }
-      else{
-        $ionicLoading.hide();
-      }
     });
-    //显示错误信息
-    $scope.showErrorMesPopup = function(title) {
-      var myPopup = $ionicPopup.show({
-        title: '<b>'+title+'</b>'
-      });
-      $timeout(function() {
-        myPopup.close(); // 2秒后关闭
-      }, 1000);
-    };
     //弹出modal
     $ionicModal.fromTemplateUrl('templates/modal_add.html', {
       scope: $scope,
@@ -47,28 +34,27 @@ angular.module('schoolListControllers',[])
     $scope.openModal=function(schoolid){
       $scope.modal.show();
       if(schoolid){
-        var token=$window.localStorage.accesstoken;
-        $schoolData.school({token:token,id:schoolid})
-          .success(function(data){
-            $ionicLoading.hide();
-            if(data.success === 0){
-              $scope.showErrorMesPopup(data.msg);
-            }else{
-              $scope.school=data.school;
-              $scope.school.title=data.school.name;
-              $timeout(function() {
-                $("#" + 'city' + schoolid).citySelect({
-                  prov: data.school.province,
-                  city: data.school.city,
-                  dist: data.school.country
-                })
-              },0);
-            }
-          })
-          .error(function(){
-            $ionicLoading.hide();
-            $scope.showErrorMesPopup('网络连接错误');
-          });
+        $SFTools.getToken(function(_token){
+          $schoolData.school({token:_token.token,id:schoolid})
+            .success(function(data){
+              if(data.success === 0){
+                $SFTools.myToast(data.msg);
+              }else{
+                $scope.school=data.school;
+                $scope.school.title=data.school.name;
+                $timeout(function() {
+                  $("#" + 'city' + schoolid).citySelect({
+                    prov: data.school.province,
+                    city: data.school.city,
+                    dist: data.school.country
+                  })
+                },0);
+              }
+            })
+            .error(function(){
+              $SFTools.myToast('网络连接错误');
+            });
+        });
       }
       else{
         $scope.school={};
@@ -86,20 +72,18 @@ angular.module('schoolListControllers',[])
     };
     $scope.save=function(){
       var school=this.school;
-      var token=$window.localStorage.accesstoken;
-      $schoolData.add({token:token,school:school})
-        .success(function(data){
-          $ionicLoading.hide();
-          if(data.success === 0){
-            $scope.showErrorMesPopup(data.msg);
-          }else{
+      $SFTools.getToken(function(_token){
+        $schoolData.add({token:token,school:school})
+          .success(function(data){
+            if(data.success === 0){
+              $SFTools.myToast(data.msg);
+            }else{
 
-          }
-        })
-        .error(function(){
-          $ionicLoading.hide();
-          $scope.showErrorMesPopup('网络连接错误');
-        })
+            }
+          })
+          .error(function(){
+            $SFTools.myToast('网络连接错误');
+          })
+      });
     }
   }]);
-;

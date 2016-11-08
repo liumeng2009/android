@@ -19,26 +19,56 @@
 
 package com.ionicframework.testtpl199249;
 
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.meng.plugin.pushservice.SocketIOService;
 
 import org.apache.cordova.*;
 
+
 public class MainActivity extends CordovaActivity
 {
+    private AppContext appContext;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        // Set by <content src="index.html" /> in config.xml
-        loadUrl(launchUrl);
+        if(appContext == null)
+          appContext = (AppContext) getApplication();
+/*
+        Intent intent = getIntent();
+        String userid = intent.getStringExtra("chatWith");
+        String username=intent.getStringExtra("username");
+
+        if(userid!=null&&userid!=""&&username!=null&&username!=""){
+          //通过intent过来的，进去chat页面
+        }
+        else{
+          loadUrl(launchUrl);
+        }
+
+*/
+      loadUrl(launchUrl);
+        Intent serviceIntent = new Intent(this,SocketIOService.class);
+        startService(serviceIntent);
     }
 
-  @Override
-  protected void onPause() {
-    Log.v("Info","paused");
-    super.onPause();
-  }
+    @Override
+    protected void onPause() {
+      Log.v("Info","paused");
+      super.onPause();
+      appContext.setBack();
+    }
+    @Override
+    protected void onResume() {
+      // TODO Auto-generated method stub
+      super.onResume();
+      appContext.setFront();
+    }
+
 }

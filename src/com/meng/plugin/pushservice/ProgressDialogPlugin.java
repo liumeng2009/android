@@ -11,6 +11,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.content.ContentValues;
+
+import java.sql.Timestamp;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import io.socket.client.Socket;
 
 /**
@@ -27,13 +31,13 @@ public class ProgressDialogPlugin extends CordovaPlugin {
 
     @Override
     public void pluginInitialize(){
-      db=SQLiteDatabase.openOrCreateDatabase(cordova.getActivity().getFilesDir().toString()+"/sfDB.db3",null);
+      db=SQLiteDatabase.openOrCreateDatabase(cordova.getActivity().getDatabasePath("sfDB.db3").toString(),null);
     }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException{
         this.callbackContext = callbackContext;
-
+        Log.v("TAG",action);
         if (action.equals("start")) {
             JSONObject message=args.getJSONObject(0);
             Toast.makeText(cordova.getActivity(), message.toString(), Toast.LENGTH_SHORT).show();
@@ -42,7 +46,7 @@ public class ProgressDialogPlugin extends CordovaPlugin {
             boolean tableExist=DbTools.isExistTable(db,"users");
             if(!tableExist){
                 //不存在表，就建立一个users表
-                db.execSQL("create table users(_id varchar(255) primary key,name varchar(50),active int,image blob,token blob)");
+                db.execSQL("create table users(id varchar(255) primary key,name varchar(50),active int,image blob,token blob,createAt blob)");
             }
             db.beginTransaction();
             try{
@@ -57,17 +61,23 @@ public class ProgressDialogPlugin extends CordovaPlugin {
                     //存在的话，就把这个user激活
                     ContentValues cv=new ContentValues();
                     cv.put("active",1);
+                    cv.put("token",message.getString("token"));
                     db.update("users",cv,"name=?",new String[]{message.getString("name")});
+                    Log.v("TAG","update");
                 }
                 else{
                     //不存在，就新增新数据
-                    ContentValues cv=new ContentValues();
-                    cv.put("_id",message.getString("_id"));
+
+                  Log.v("TAG","这个是时间戳吗？"+System.currentTimeMillis());
+                  ContentValues cv=new ContentValues();
+                    cv.put("id",message.getString("_id"));
                     cv.put("name",message.getString("name"));
                     cv.put("active",1);
                     cv.put("image","");
                     cv.put("token",message.getString("token"));
+                    cv.put("createAt",System.currentTimeMillis());
                     db.insert("users",null,cv);
+                    Log.v("TAG","create");
                 }
                 db.setTransactionSuccessful();
             }
@@ -78,13 +88,8 @@ public class ProgressDialogPlugin extends CordovaPlugin {
             db.endTransaction();
             //db.close();
             //启动服务
-            //Intent intent =new Intent(cordova.getActivity(),ChatService.class);
-            //intent.putExtra("username",message.getString("name"));
-            //intent.putExtra("_id",message.getString("_id"));
-            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            //登录部分，重新启动service
-            //cordova.getActivity().stopService(intent);
-            //cordova.getActivity().startService(intent);
+            Intent intent =new Intent(cordova.getActivity(),SocketIOService.class);
+            cordova.getActivity().startService(intent);
             return true;
         }
         return false;

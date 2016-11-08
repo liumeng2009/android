@@ -3,6 +3,7 @@ package com.meng.plugin.pushservice;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -32,6 +33,7 @@ public class DbTools {
         else{
             //不存在这个人，从服务器请求这个人的信息，存入数据库
             try {
+                Log.v("TAG",netTools.getActorInfo(db,actorId).toString());
                 JSONObject jsonObject=netTools.getActorInfo(db,actorId).getJSONObject("user");
                 ContentValues cv=new ContentValues();
                 cv.put("_id",jsonObject.getString("_id"));

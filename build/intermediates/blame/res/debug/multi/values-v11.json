@@ -12,14 +12,14 @@
                     "endOffset": 469
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 56,
-                        "endLine": 8,
+                        "startOffset": 301,
+                        "endLine": 9,
                         "endColumn": 12,
-                        "endOffset": 470
+                        "endOffset": 715
                     }
                 }
             },
@@ -33,14 +33,14 @@
                     "endOffset": 894
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 476,
+                        "startOffset": 720,
                         "endLine": 15,
                         "endColumn": 12,
-                        "endOffset": 896
+                        "endOffset": 1140
                     }
                 }
             },
@@ -54,14 +54,14 @@
                     "endOffset": 1322
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 902,
-                        "endLine": 22,
+                        "startOffset": 1145,
+                        "endLine": 21,
                         "endColumn": 12,
-                        "endOffset": 1325
+                        "endOffset": 1568
                     }
                 }
             },
@@ -75,14 +75,14 @@
                     "endOffset": 1748
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 24,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1331,
-                        "endLine": 29,
+                        "startOffset": 1573,
+                        "endLine": 27,
                         "endColumn": 12,
-                        "endOffset": 1752
+                        "endOffset": 1994
                     }
                 }
             },
@@ -96,14 +96,14 @@
                     "endOffset": 2177
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 31,
+                        "startLine": 28,
                         "startColumn": 4,
-                        "startOffset": 1758,
-                        "endLine": 36,
+                        "startOffset": 1999,
+                        "endLine": 33,
                         "endColumn": 12,
-                        "endOffset": 2182
+                        "endOffset": 2423
                     }
                 }
             },
@@ -117,14 +117,14 @@
                     "endOffset": 2602
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 38,
+                        "startLine": 34,
                         "startColumn": 4,
-                        "startOffset": 2188,
-                        "endLine": 43,
+                        "startOffset": 2428,
+                        "endLine": 39,
                         "endColumn": 12,
-                        "endOffset": 2608
+                        "endOffset": 2848
                     }
                 }
             },
@@ -133,40 +133,78 @@
                     "startLine": 38,
                     "startColumn": 4,
                     "startOffset": 2607,
-                    "endLine": 43,
-                    "endColumn": 12,
-                    "endOffset": 3023
+                    "endColumn": 88,
+                    "endOffset": 2691
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 45,
+                        "startLine": 42,
                         "startColumn": 4,
-                        "startOffset": 2614,
-                        "endLine": 50,
-                        "endColumn": 12,
-                        "endOffset": 3030
+                        "startOffset": 3094,
+                        "endColumn": 88,
+                        "endOffset": 3178
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 3028,
-                    "endLine": 49,
-                    "endColumn": 12,
-                    "endOffset": 3458
+                    "startOffset": 2696,
+                    "endColumn": 100,
+                    "endOffset": 2792
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 52,
+                        "startLine": 43,
                         "startColumn": 4,
-                        "startOffset": 3036,
-                        "endLine": 57,
+                        "startOffset": 3183,
+                        "endColumn": 100,
+                        "endOffset": 3279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2797,
+                    "endLine": 44,
+                    "endColumn": 12,
+                    "endOffset": 3200
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3284,
+                        "endLine": 48,
                         "endColumn": 12,
-                        "endOffset": 3466
+                        "endOffset": 3687
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 3205,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 3620
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3692,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 4107
                     }
                 }
             },
@@ -174,262 +212,142 @@
                 "to": {
                     "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 3463,
-                    "endLine": 55,
+                    "startOffset": 3625,
+                    "endLine": 51,
                     "endColumn": 12,
-                    "endOffset": 3891
+                    "endOffset": 3727
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 59,
+                        "startLine": 56,
                         "startColumn": 4,
-                        "startOffset": 3472,
+                        "startOffset": 4353,
+                        "endLine": 57,
+                        "endColumn": 12,
+                        "endOffset": 4455
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3732,
+                    "endLine": 53,
+                    "endColumn": 12,
+                    "endOffset": 3856
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 4460,
+                        "endLine": 59,
+                        "endColumn": 12,
+                        "endOffset": 4584
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 3861,
+                    "endLine": 58,
+                    "endColumn": 12,
+                    "endOffset": 4220
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 4589,
                         "endLine": 64,
                         "endColumn": 12,
-                        "endOffset": 3900
+                        "endOffset": 4948
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 3896,
-                    "endLine": 61,
+                    "startOffset": 4225,
+                    "endColumn": 70,
+                    "endOffset": 4291
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 5194,
+                        "endColumn": 70,
+                        "endOffset": 5260
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4296,
+                    "endColumn": 82,
+                    "endOffset": 4374
+                },
+                "from": {
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 5265,
+                        "endColumn": 82,
+                        "endOffset": 5343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4379,
+                    "endLine": 111,
                     "endColumn": 12,
-                    "endOffset": 4338
+                    "endOffset": 8123
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 66,
+                        "startLine": 69,
                         "startColumn": 4,
-                        "startOffset": 3906,
-                        "endLine": 71,
+                        "startOffset": 5348,
+                        "endLine": 119,
                         "endColumn": 12,
-                        "endOffset": 4348
+                        "endOffset": 9092
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 112,
                     "startColumn": 4,
-                    "startOffset": 4343,
-                    "endColumn": 77,
-                    "endOffset": 4416
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 73,
-                        "startColumn": 4,
-                        "startOffset": 4354,
-                        "endColumn": 78,
-                        "endOffset": 4428
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 63,
-                    "startColumn": 4,
-                    "startOffset": 4421,
-                    "endColumn": 91,
-                    "endOffset": 4508
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 75,
-                        "startColumn": 4,
-                        "startOffset": 4434,
-                        "endColumn": 92,
-                        "endOffset": 4522
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 64,
-                    "startColumn": 4,
-                    "startOffset": 4513,
-                    "endColumn": 89,
-                    "endOffset": 4598
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 77,
-                        "startColumn": 4,
-                        "startOffset": 4528,
-                        "endColumn": 90,
-                        "endOffset": 4614
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 65,
-                    "startColumn": 4,
-                    "startOffset": 4603,
-                    "endLine": 160,
+                    "startOffset": 8128,
+                    "endLine": 163,
                     "endColumn": 12,
-                    "endOffset": 11327
+                    "endOffset": 12012
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 79,
+                        "startLine": 120,
                         "startColumn": 4,
-                        "startOffset": 4620,
-                        "endLine": 174,
+                        "startOffset": 9097,
+                        "endLine": 171,
                         "endColumn": 12,
-                        "endOffset": 11344
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 161,
-                    "startColumn": 4,
-                    "startOffset": 11332,
-                    "endColumn": 94,
-                    "endOffset": 11422
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 176,
-                        "startColumn": 4,
-                        "startOffset": 11350,
-                        "endColumn": 101,
-                        "endOffset": 11447
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 162,
-                    "startColumn": 4,
-                    "startOffset": 11427,
-                    "endColumn": 116,
-                    "endOffset": 11539
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 178,
-                        "startColumn": 4,
-                        "startOffset": 11453,
-                        "endColumn": 123,
-                        "endOffset": 11572
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 163,
-                    "startColumn": 4,
-                    "startOffset": 11544,
-                    "endLine": 167,
-                    "endColumn": 12,
-                    "endOffset": 11903
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 180,
-                        "startColumn": 4,
-                        "startOffset": 11578,
-                        "endLine": 184,
-                        "endColumn": 12,
-                        "endOffset": 11937
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 168,
-                    "startColumn": 4,
-                    "startOffset": 11908,
-                    "endLine": 213,
-                    "endColumn": 12,
-                    "endOffset": 15540
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 186,
-                        "startColumn": 4,
-                        "startOffset": 11943,
-                        "endLine": 231,
-                        "endColumn": 12,
-                        "endOffset": 15575
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 214,
-                    "startColumn": 4,
-                    "startOffset": 15545,
-                    "endLine": 259,
-                    "endColumn": 12,
-                    "endOffset": 19191
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 233,
-                        "startColumn": 4,
-                        "startOffset": 15581,
-                        "endLine": 278,
-                        "endColumn": 12,
-                        "endOffset": 19227
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 260,
-                    "startColumn": 4,
-                    "startOffset": 19196,
-                    "endLine": 306,
-                    "endColumn": 12,
-                    "endOffset": 22967
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 280,
-                        "startColumn": 4,
-                        "startOffset": 19233,
-                        "endLine": 326,
-                        "endColumn": 12,
-                        "endOffset": 23004
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 307,
-                    "startColumn": 4,
-                    "startOffset": 22972,
-                    "endLine": 353,
-                    "endColumn": 12,
-                    "endOffset": 26757
-                },
-                "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\21.0.3\\res\\values-v11\\values.xml",
-                    "position": {
-                        "startLine": 328,
-                        "startColumn": 4,
-                        "startOffset": 23010,
-                        "endLine": 374,
-                        "endColumn": 12,
-                        "endOffset": 26795
+                        "endOffset": 12981
                     }
                 }
             }

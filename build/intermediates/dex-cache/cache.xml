@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="6901ff7d8d531c50530a1a7d333dbd7da0faed10">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_371463cda3e8998b8310d8df68aa765b56f236fd\classes.dex" />
+    </item>
+
+</items>

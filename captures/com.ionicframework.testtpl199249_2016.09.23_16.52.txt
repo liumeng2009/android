@@ -1,0 +1,232 @@
+CURRENT STATS:
+System memory usage:
+  SOn /Norm: 1 samples:
+    Cached: 311MB min, 311MB avg, 311MB max
+    Free: 739MB min, 739MB avg, 739MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 42MB min, 42MB avg, 42MB max
+    Native: 41MB min, 41MB avg, 41MB max
+
+Per-Package Stats:
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+      * com.ionicframework.testtpl199249 / u0a60 / v1:
+               TOTAL: 89% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+                 Top: 89% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+          (Last Act): 0.26%
+            (Cached): 0.42%
+      * .pushservice / u0a60 / v1:
+               TOTAL: 6.8% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+             Service: 3.6% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+          Service Rs: 3.3%
+      * com.meng.plugin.pushservice.ChatService:
+        Process: .pushservice
+            Running count 6 / time 6.8%
+            Started count 5 / time 6.6%
+          Executing count 4 / time 3.6%
+
+Summary:
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+           TOTAL: 89% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+             Top: 89% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+      (Last Act): 0.26%
+        (Cached): 0.42%
+  * .pushservice / u0a60 / v1:
+           TOTAL: 6.8% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+         Service: 3.6% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+      Service Rs: 3.3%
+
+Run time Stats:
+  SOn /Norm: +26m31s150ms (running)
+      TOTAL: +26m31s150ms
+
+Memory usage:
+  Kernel : 42MB (8 samples)
+  Native : 41MB (8 samples)
+  Persist: 107MB (6 samples)
+  Top    : 72MB (29 samples)
+  ImpFg  : 40MB (31 samples)
+  ImpBg  : 13MB (9 samples)
+  Service: 64MB (52 samples)
+  Receivr: 533KB (50 samples)
+  Home   : 492KB (3 samples)
+  LastAct: 198KB (13 samples)
+  CchEmty: 118MB (53 samples)
+  Cached : 311MB (8 samples)
+  Free   : 739MB (8 samples)
+  TOTAL  : 1.5GB
+  ServRst: 468KB (11 samples)
+
+          Start time: 2016-09-23 08:25:10
+  Total elapsed time: +26m52s494ms (partial) libart.so
+
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOn /Norm: 3 samples:
+    Cached: 289MB min, 302MB avg, 311MB max
+    Free: 656MB min, 712MB avg, 740MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 42MB min, 50MB avg, 61MB max
+    Native: 40MB min, 41MB avg, 42MB max
+
+Per-Package Stats:
+  * com.ionicframework.testtpl199249 / u0a59 / v1:
+      * com.ionicframework.testtpl199249 / u0a59 / v1:
+               TOTAL: 1.9% (6.1MB-79MB-103MB/4.9MB-73MB-97MB over 15)
+                 Top: 1.9% (6.1MB-79MB-103MB/4.9MB-73MB-97MB over 15)
+             Service: 0.01%
+            Receiver: 0.02%
+          (Last Act): 95% (73MB-74MB-86MB/68MB-69MB-80MB over 36)
+            (Cached): 0.03%
+      * .pushservice / u0a59 / v1:
+               TOTAL: 97% (6.5MB-7.8MB-8.7MB/4.9MB-5.7MB-6.5MB over 57)
+             Service: 97% (6.5MB-7.8MB-8.7MB/4.9MB-5.7MB-6.5MB over 57)
+      * com.meng.plugin.pushservice.ChatService:
+        Process: .pushservice
+            Running count 20 / time 2.3%
+            Started count 18 / time 2.3%
+          Executing count 14 / time 0.04%
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+      * com.ionicframework.testtpl199249 / u0a60 / v1:
+               TOTAL: 2.3% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+                 Top: 2.3% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+          (Last Act): 0.01%
+            (Cached): 0.01%
+      * .pushservice / u0a60 / v1:
+               TOTAL: 0.18% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+             Service: 0.09% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+          Service Rs: 0.08%
+      * com.meng.plugin.pushservice.ChatService:
+        Process: .pushservice
+            Running count 6 / time 0.18%
+            Started count 5 / time 0.17%
+          Executing count 4 / time 0.09%
+
+Summary:
+  * .pushservice / u0a59 / v1:
+           TOTAL: 97% (6.5MB-7.8MB-8.7MB/4.9MB-5.7MB-6.5MB over 57)
+         Service: 97% (6.5MB-7.8MB-8.7MB/4.9MB-5.7MB-6.5MB over 57)
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+           TOTAL: 2.3% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+             Top: 2.3% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+      (Last Act): 0.01%
+        (Cached): 0.01%
+  * com.ionicframework.testtpl199249 / u0a59 / v1:
+           TOTAL: 1.9% (6.1MB-79MB-103MB/4.9MB-73MB-97MB over 15)
+             Top: 1.9% (6.1MB-79MB-103MB/4.9MB-73MB-97MB over 15)
+         Service: 0.01%
+        Receiver: 0.02%
+      (Last Act): 95% (73MB-74MB-86MB/68MB-69MB-80MB over 36)
+        (Cached): 0.03%
+  * .pushservice / u0a60 / v1:
+           TOTAL: 0.18% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+         Service: 0.09% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+      Service Rs: 0.08%
+
+Run time Stats:
+  SOn /Norm: +16h57m56s299ms
+      TOTAL: +16h57m56s299ms
+
+Memory usage:
+  Kernel : 50MB (24 samples)
+  Native : 41MB (24 samples)
+  Persist: 115MB (201 samples)
+  Top    : 95MB (1556 samples)
+  ImpFg  : 49MB (436 samples)
+  ImpBg  : 17MB (177 samples)
+  Service: 11MB (527 samples)
+  Receivr: 44KB (574 samples)
+  Home   : 12KB (13 samples)
+  LastAct: 71MB (50 samples)
+  CchAct : 223KB (40 samples)
+  CchEmty: 64MB (541 samples)
+  Cached : 302MB (24 samples)
+  Free   : 712MB (24 samples)
+  TOTAL  : 1.5GB
+  ServRst: 17KB (316 samples)
+
+          Start time: 2016-09-01 08:51:11
+  Total elapsed time: +16h58m44s29ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOn /Norm: 2 samples:
+    Cached: 289MB min, 300MB avg, 311MB max
+    Free: 656MB min, 698MB avg, 739MB max
+    ZRam: 0.00 min, 0.00 avg, 0.00 max
+    Kernel: 42MB min, 51MB avg, 61MB max
+    Native: 40MB min, 41MB avg, 41MB max
+
+Per-Package Stats:
+  * com.ionicframework.testtpl199249 / u0a59 / v1:
+      * com.ionicframework.testtpl199249 / u0a59 / v1:
+               TOTAL: 13% (25MB-83MB-100MB/21MB-77MB-96MB over 12)
+                 Top: 13% (25MB-83MB-100MB/21MB-77MB-96MB over 12)
+          (Last Act): 61% (73MB-78MB-86MB/68MB-73MB-80MB over 6)
+      * .pushservice / u0a59 / v1:
+               TOTAL: 73% (6.5MB-7.8MB-8.7MB/4.9MB-5.9MB-6.5MB over 11)
+             Service: 73% (6.5MB-7.8MB-8.7MB/4.9MB-5.9MB-6.5MB over 11)
+          Service Rs: 0.02%
+      * com.meng.plugin.pushservice.ChatService:
+        Process: .pushservice
+            Running count 15 / time 18%
+            Started count 14 / time 18%
+          Executing count 10 / time 0.19%
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+      * com.ionicframework.testtpl199249 / u0a60 / v1:
+               TOTAL: 20% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+                 Top: 20% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+          (Last Act): 0.06%
+            (Cached): 0.10%
+      * .pushservice / u0a60 / v1:
+               TOTAL: 1.6% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+             Service: 0.81% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+          Service Rs: 0.74%
+      * com.meng.plugin.pushservice.ChatService:
+        Process: .pushservice
+            Running count 6 / time 1.6%
+            Started count 5 / time 1.5%
+          Executing count 4 / time 0.81%
+
+Summary:
+  * .pushservice / u0a59 / v1:
+           TOTAL: 73% (6.5MB-7.8MB-8.7MB/4.9MB-5.9MB-6.5MB over 11)
+         Service: 73% (6.5MB-7.8MB-8.7MB/4.9MB-5.9MB-6.5MB over 11)
+      Service Rs: 0.02%
+  * com.ionicframework.testtpl199249 / u0a60 / v1:
+           TOTAL: 20% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+             Top: 20% (6.2MB-76MB-94MB/4.5MB-71MB-88MB over 13)
+      (Last Act): 0.06%
+        (Cached): 0.10%
+  * com.ionicframework.testtpl199249 / u0a59 / v1:
+           TOTAL: 13% (25MB-83MB-100MB/21MB-77MB-96MB over 12)
+             Top: 13% (25MB-83MB-100MB/21MB-77MB-96MB over 12)
+      (Last Act): 61% (73MB-78MB-86MB/68MB-73MB-80MB over 6)
+  * .pushservice / u0a60 / v1:
+           TOTAL: 1.6% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+         Service: 0.81% (4.8MB-4.8MB-4.8MB/3.4MB-3.4MB-3.4MB over 1)
+      Service Rs: 0.74%
+
+Run time Stats:
+  SOn /Norm: +1h56m17s29ms
+      TOTAL: +1h56m17s29ms
+
+Memory usage:
+  Kernel : 51MB (16 samples)
+  Native : 41MB (16 samples)
+  Persist: 105MB (22 samples)
+  Top    : 82MB (166 samples)
+  ImpFg  : 46MB (93 samples)
+  ImpBg  : 14MB (28 samples)
+  Service: 30MB (137 samples)
+  Receivr: 202KB (155 samples)
+  Home   : 108KB (11 samples)
+  LastAct: 48MB (20 samples)
+  CchAct : 2.1MB (3 samples)
+  CchEmty: 84MB (137 samples)
+  Cached : 300MB (16 samples)
+  Free   : 698MB (16 samples)
+  TOTAL  : 1.5GB
+  ServRst: 128KB (56 samples)
+
+          Start time: 2016-09-01 23:53:00
+  Total elapsed time: +1h56m56s798ms (partial) libart.so

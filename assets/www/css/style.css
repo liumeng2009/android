@@ -106,7 +106,16 @@
 #incomingChatMessages .list-per {
   float: left;
   width: 100%;
-  padding: 10px;
+  padding: 5px 2px;
+}
+#incomingChatMessages .message-createAt {
+  text-align: center;
+  margin-bottom: 8px;
+}
+#incomingChatMessages .message-createAt span {
+  background-color: #d4d4d4;
+  padding: 3px 5px;
+  color: #ffffff;
 }
 #incomingChatMessages li:after {
   clear: both;
@@ -120,8 +129,8 @@
   text-align: center;
 }
 #incomingChatMessages table.to .user img {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
 }
 #incomingChatMessages table.to .user span {
   width: 70px;
@@ -137,12 +146,13 @@
   display: block;
   width: auto;
   height: auto;
-  padding: 10px;
+  padding: 7px 7px;
   line-height: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #fff;
   position: relative;
   font-size: 14px;
+  color: #353535;
 }
 #incomingChatMessages table.to .chat label {
   color: #999;
@@ -152,11 +162,11 @@
   content: '';
   position: absolute;
   top: 10px;
-  left: -25px;
-  border-right: 15px #fff solid;
-  border-left: 15px transparent solid;
-  border-top: 10px transparent solid;
-  border-bottom: 10px transparent solid;
+  left: -13px;
+  border-right: 7px #fff solid;
+  border-left: 7px transparent solid;
+  border-top: 5px transparent solid;
+  border-bottom: 5px transparent solid;
 }
 #incomingChatMessages table.from {
   padding: 10px;
@@ -167,8 +177,8 @@
   text-align: center;
 }
 #incomingChatMessages table.from .user img {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
 }
 #incomingChatMessages table.from .user span {
   width: 70px;
@@ -184,11 +194,11 @@
   display: block;
   width: auto;
   height: auto;
-  padding: 10px;
+  padding: 7px 7px;
   line-height: 20px;
-  border-radius: 10px;
-  background-color: #33cd5f;
-  color: #000;
+  border-radius: 5px;
+  background-color: #a0e75a;
+  color: #353535;
   position: relative;
   font-size: 14px;
 }
@@ -200,66 +210,68 @@
   content: '';
   position: absolute;
   top: 10px;
-  right: -25px;
-  border-left: 15px #33cd5f solid;
-  border-right: 15px transparent solid;
-  border-top: 10px transparent solid;
-  border-bottom: 10px transparent solid;
+  right: -13px;
+  border-left: 7px #a0e75a solid;
+  border-right: 7px transparent solid;
+  border-top: 5px transparent solid;
+  border-bottom: 5px transparent solid;
 }
 #mainlist .item {
   padding: 10px;
   background-color: #fefefe;
 }
-#mainlist .item .offline img {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  filter: gray;
-}
 #mainlist .item img {
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
   float: left;
-  border: #eeeeee 1px solid;
-  box-shadow: 1px 1px 1px #ccc;
 }
 #mainlist .item .new {
   position: absolute;
-  width: auto;
-  padding: 0px 6px;
-  height: 20px;
-  border-radius: 12px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
   color: #fff;
   background-color: #ff4d4d;
   text-align: center;
-  right: 10px;
-  bottom: 25px;
-  font-size: 14px;
-  line-height: 20px;
+  left: 51px;
+  top: 6px;
+  font-size: 12px;
+  line-height: 14px;
+}
+#mainlist .item .new-small {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #ff4d4d;
+  text-align: center;
+  left: 53px;
+  top: 8px;
+  font-size: 12px;
+  line-height: 10px;
 }
 #mainlist .item .right {
   margin-left: 15px;
 }
 #mainlist .item .right .name {
-  margin-left: 70px;
-  font-size: 20px;
+  margin-left: 50px;
+  font-size: 16px;
   color: #000;
-  line-height: 36px;
+  line-height: 26px;
   position: relative;
 }
 #mainlist .item .right .name .date {
   float: right;
   font-size: 12px;
   color: #8f8f8f;
-  line-height: 40px;
+  line-height: 20px;
   position: absolute;
   top: 0px;
   right: 0px;
 }
 #mainlist .item .right .content {
-  margin-left: 70px;
+  margin-left: 50px;
   font-size: 14px;
   color: #8f8f8f;
 }

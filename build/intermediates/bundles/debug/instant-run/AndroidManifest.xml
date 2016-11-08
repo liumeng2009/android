@@ -23,8 +23,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.NETWORK" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        name="com.ionicframework.testtpl199249.AppContext"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
@@ -43,6 +47,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name="com.meng.plugin.pushservice.SocketIOService" >
+            <intent-filter>
+                <action android:name="com.meng.plugin.pushservice.SocketIOService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="de.appplant.cordova.plugin.notification.ClickActivity"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoDisplay" />
 
         <receiver
             android:name="de.appplant.cordova.plugin.localnotification.TriggerReceiver"
@@ -63,36 +79,6 @@
         <receiver
             android:name="de.appplant.cordova.plugin.notification.ClearReceiver"
             android:exported="false" />
-        <receiver
-            android:name="de.appplant.cordova.plugin.localnotification.RestoreReceiver"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name="com.meng.plugin.pushservice.ChatService"
-            android:enabled="true"
-            android:exported="true" />
-
-        <activity
-            android:name="de.appplant.cordova.plugin.notification.ClickActivity"
-            android:exported="false"
-            android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.NoDisplay" />
-
-        <receiver android:name="com.meng.plugin.pushservice.BootPushServiceReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="android.support.v7.widget.TestActivity"
-            android:label="RecyclerViewTestActivity" />
     </application>
 
 </manifest>

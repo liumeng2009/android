@@ -1,0 +1,63 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        cd84761 com.ionicframework.testtpl199249/.MainActivity
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.BOOT_COMPLETED:
+        e3b747 com.ionicframework.testtpl199249/de.appplant.cordova.plugin.localnotification.RestoreReceiver
+        3dc2286 com.ionicframework.testtpl199249/com.meng.plugin.pushservice.BootPushServiceReceiver
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.meng.plugin.pushservice.ChatService:
+        ab6db74 com.ionicframework.testtpl199249/com.meng.plugin.pushservice.ChatService
+
+Key Set Manager:
+  [com.ionicframework.testtpl199249]
+      Signing KeySets: 48
+
+Packages:
+  Package [com.ionicframework.testtpl199249] (670f89d):
+    userId=10148
+    pkg=Package{47e112 com.ionicframework.testtpl199249}
+    codePath=/data/app/com.ionicframework.testtpl199249-1
+    dexoptNeeded=false
+    resourcePath=/data/app/com.ionicframework.testtpl199249-1
+    legacyNativeLibraryDir=/data/app/com.ionicframework.testtpl199249-1/lib
+    primaryCpuAbi=armeabi-v7a
+    secondaryCpuAbi=null
+    versionCode=1 targetSdk=23
+    versionName=0.0.1
+    splits=[base]
+    applicationInfo=ApplicationInfo{b1a80e3 com.ionicframework.testtpl199249}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    dataDir=/data/user/0/com.ionicframework.testtpl199249
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2016-09-20 14:46:30
+    firstInstallTime=2016-09-15 01:32:49
+    lastUpdateTime=2016-09-20 14:46:34
+    signatures=PackageSignatures{203ae0 [fbd73a8]}
+    installPermissionsFixed=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.INTERNET
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.NETWORK
+      android.permission.VIBRATE
+      android.permission.GET_TASKS
+      android.permission.READ_EXTERNAL_STORAGE
+    install permissions:
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.GET_TASKS: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.VIBRATE: granted=true
+    User 0:  installed=true hidden=false stopped=false notLaunched=false enabled=0
+      gids=[3003]
+      runtime permissions:
+        android.permission.READ_EXTERNAL_STORAGE: granted=true
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=true
