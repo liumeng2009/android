@@ -1,5 +1,5 @@
 angular.module('starter.services', ['loginServices','usercenterServices','schoolServices','gradeServices','childrenServices','mainServices'])
-  .factory('$SFTools',['$cordovaToast','$cordovaSQLite','$cordovaDialogs',function($cordovaToast,$cordovaSQLite,$cordovaDialogs){
+  .factory('$SFTools',['$cordovaToast','$cordovaSQLite','$cordovaDialogs','$cordovaPreferences',function($cordovaToast,$cordovaSQLite,$cordovaDialogs,$cordovaPreferences){
     return {
       myToast:function(msg){
         document.addEventListener('deviceready',function() {
@@ -46,6 +46,17 @@ angular.module('starter.services', ['loginServices','usercenterServices','school
             });
           });
         }
+      },
+      getStartPage:function(callback){
+          document.addEventListener('deviceready',function() {
+            $cordovaPreferences.fetch('startPage')
+              .success(function(value) {
+                callback(value)
+              })
+              .error(function(error) {
+                callback('main');
+              })
+          });
       }
     }
   }]);

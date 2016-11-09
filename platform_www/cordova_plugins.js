@@ -103,6 +103,14 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "id": "cordova-plugin-app-preferences.apppreferences",
+        "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+        "pluginId": "cordova-plugin-app-preferences",
+        "clobbers": [
+            "plugins.appPreferences"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -118,7 +126,8 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "com.meng.plugin.pushservice": "1.0.0",
     "cordova-plugin-dialogs": "1.3.0",
-    "cordova-plugin-splashscreen": "4.0.0"
+    "cordova-plugin-splashscreen": "4.0.0",
+    "cordova-plugin-app-preferences": "0.99.3"
 };
 // BOTTOM OF METADATA
 });

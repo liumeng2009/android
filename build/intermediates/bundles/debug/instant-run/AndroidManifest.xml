@@ -54,6 +54,12 @@
             </intent-filter>
         </service>
 
+        <receiver android:name="com.ionicframework.testtpl199249.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="de.appplant.cordova.plugin.notification.ClickActivity"
             android:exported="false"
@@ -79,6 +85,13 @@
         <receiver
             android:name="de.appplant.cordova.plugin.notification.ClearReceiver"
             android:exported="false" />
+        <receiver
+            android:name="de.appplant.cordova.plugin.localnotification.RestoreReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

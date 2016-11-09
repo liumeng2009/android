@@ -453,7 +453,6 @@ angular.module('chatControllers',[])
         },function(tx,error){
 
         },function(){
-          alert("发出了 看过了 的通知");
           $rootScope.$broadcast('SawMessage',userid);
         })
       });

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\apppreferences.xml",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\xml\\apppreferences.xml"
+    },
+    {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\xml\\config.xml",
         "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\xml\\config.xml"
     }

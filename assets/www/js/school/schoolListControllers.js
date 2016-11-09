@@ -27,7 +27,7 @@ angular.module('schoolListControllers',[])
     //弹出modal
     $ionicModal.fromTemplateUrl('templates/modal_add.html', {
       scope: $scope,
-      animation: 'slide-in-up'
+      animation: 'slide-in-left'
     }).then(function(modal) {
       $scope.modal = modal;
     });

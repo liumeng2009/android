@@ -22,7 +22,9 @@ package com.ionicframework.testtpl199249;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -40,20 +42,26 @@ public class MainActivity extends CordovaActivity
         super.onCreate(savedInstanceState);
         if(appContext == null)
           appContext = (AppContext) getApplication();
-/*
+
+        SharedPreferences preferences=getSharedPreferences("startPage",MODE_WORLD_READABLE);
+
         Intent intent = getIntent();
         String userid = intent.getStringExtra("chatWith");
         String username=intent.getStringExtra("username");
 
         if(userid!=null&&userid!=""&&username!=null&&username!=""){
-          //通过intent过来的，进去chat页面
+          //通过intent过来的，进去chat页面,用sharedPreferences
+          SharedPreferences.Editor editor=preferences.edit();
+          editor.putString("startPage","chat");
+          editor.commit();
+
         }
         else{
-          loadUrl(launchUrl);
+          SharedPreferences.Editor editor=preferences.edit();
+          editor.putString("startPage","main");
+          editor.commit();
         }
-
-*/
-      loadUrl(launchUrl);
+        loadUrl(launchUrl);
         Intent serviceIntent = new Intent(this,SocketIOService.class);
         startService(serviceIntent);
     }

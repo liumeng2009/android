@@ -2,11 +2,88 @@
 <items version="2" >
 
     <item
-        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="false"
         revision="24.0.1"
-        sha1="6901ff7d8d531c50530a1a7d333dbd7da0faed10">
-        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_371463cda3e8998b8310d8df68aa765b56f236fd\classes.dex" />
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_88532c60115abe094a363f086a73f9cb454a5127.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okio-1.6.0_5de0cea68b3cb1d2be00ab1f3e77481f5ffaa189.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.2.0_240dab83a6f1bfd1703f745ff7001ce3afbeb169.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\io.socket\socket.io-client\0.7.0\ce278c97bc9f74c7945d647f6d441d6013163362\socket.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="ce278c97bc9f74c7945d647f6d441d6013163362">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\socket.io-client-0.7.0_79b672786d02191098da57936717dd06129d5fbe.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_bc38377445399225efb0181b3733073ce399c63f.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\io.socket\engine.io-client\0.7.0\c1b1d30e2d2231b2eae1438a44943a409b976dac\engine.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="c1b1d30e2d2231b2eae1438a44943a409b976dac">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\engine.io-client-0.7.0_b5f008f846f5bcb5868b717d29cf3c68077ab20c.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\libs\sqlite-connector.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="76169ab23a4f939925491c6fe186749da5a56ee9">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\sqlite-connector_6d7044c8839871df14c4b0a47569d1a639e589c6.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.1\b34c1f2d993044656e87f88970b6818e99e886ba\okhttp-3.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okhttp-3.0.1_13a0d448307b5d98decf10c50eb00d250ae5ca03.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_8e180cc5ec833a1ef0e9a7363d67f6fb43400196.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="cdea010136ef25536d3c132f9bccee2dff534824">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_92f72735e427460f64e60d57f46528807d62e804.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.1.1\3af19f153122737b372622fa6c81dd11a1c6b999\support-annotations-24.1.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_6332f3479209b176dbc5b1ef12f3bfce5bb7af47.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.0.1\bd9b51a0188fc8f14bf840a0d326755545206116\okhttp-ws-3.0.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="bd9b51a0188fc8f14bf840a0d326755545206116">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okhttp-ws-3.0.1_16677c01e7e5824c9cc2c91798614396aa6380e0.jar" />
     </item>
 
 </items>
