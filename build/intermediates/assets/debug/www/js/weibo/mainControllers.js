@@ -229,18 +229,21 @@ angular.module('mainControllers',['ngCordova'])
         var chat=obj.message;
         var from=obj.from;
         var db = null;
-        //根据当前path决定new值
+        //根据当前path决定new值，变了，根据modal是否存在而决定
         var newMessage=false;
-        var path=$location.path();
+
+        //var path=$location.path();
         //path格式是 /chat/id/name
-        var pathArray=path.split('/');
-        if(pathArray[1]&&pathArray[1]==='chat'&&pathArray[2]===from._id){
+        //var pathArray=path.split('/');
+        //if(pathArray[1]&&pathArray[1]==='chat'&&pathArray[2]===from._id){
           //说明当前路径在chat，并且和这个人说话，那么就不存在new的情况了。
-          newMessage=false;
-        }
-        else{
-          newMessage=true;
-        }
+        //  newMessage=false;
+       // }
+        //else{
+        //  newMessage=true;
+       // }
+
+        if($scope.modal&&$scope.modal)
 
         //向服务器发送消息，我收到了，你的标志位可以修改了
         iosocket.emit('ReciveMessage',{chatid:obj.message._id});
@@ -449,6 +452,7 @@ angular.module('mainControllers',['ngCordova'])
       $rootScope.$on('SawMessage',function(event,obj){
         alert('接到了看过了通知'+obj);
         for(var i=0;i<$scope.chats.length;i++){
+          alert($scope.chats[i].userid+'和'+obj+'作比较');
           if($scope.chats[i].userid===obj){
             $scope.chats[i].new=0;
             break;
@@ -769,6 +773,7 @@ angular.module('mainControllers',['ngCordova'])
     $scope.receiveMessagePerson=function(userid){
       $rootScope.$on('ReciveMessage',function(event,obj){
         //保存已经被main页面做了，所以实时显示即可
+        alert('chat页面收到消息了');
         if(userid===obj.from._id){
           if($scope.messages.length>0){
             _m={
@@ -861,7 +866,7 @@ angular.module('mainControllers',['ngCordova'])
         },function(error){
         },function(){
           alert('发送我看过了这个通知');
-          $rootScope.$broadcast('SawMessage',userid);
+          $rootScope.$broadcast('SawMessage',touser);
         })
       });
     }
