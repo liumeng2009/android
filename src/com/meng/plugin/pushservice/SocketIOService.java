@@ -97,6 +97,12 @@ public class SocketIOService extends Service {
       //建立userinfo表
       String userinfo_table = "create table if not exists userinfo(id,name,image,showInMain)";
       db.execSQL(userinfo_table);
+      //建立chat表
+      String chat_table = "CREATE TABLE IF NOT EXISTS chat (id,fromuser,touser,content,createAt,saw)";
+      db.execSQL(chat_table);
+      //建立main_message表
+      String main_message_table = "create table if not exists main_message(master,relation_user,relation_user_id,content,createAt,saw,status,relation_chat_id)";
+      db.execSQL(main_message_table);
       initUser();
       initializeSocket();
       addSocketHandlers();
@@ -276,11 +282,50 @@ public class SocketIOService extends Service {
                      db.insert("chat",null,cv);
                     }
 
+                    //修改main表 接收消息后，根据main表的relation_chat_id，判断。如果这条消息id和表里面存的一致，则说明page已经做了操作了，不需要数据库操作了，如果不一致，就需要改变数据库。
+                    Log.v("Info","开始进行main_message的更新");
+                    String masterExist="select * from main_message where master='"+touser+"' and status=1";
+                    Cursor cursor3=db.rawQuery(masterExist,null);
+                    if(cursor3.getCount()!=0){
+                      //存在这个人，就不能插入了,要看看这条数据的relation_chat_id是否一致
+                      cursor3.moveToFirst();
+                      String chatid=cursor3.getString(7);
+                      int saw2=cursor3.getInt(5);
+                      if(chatid==id){
+                        //不需要修改数据了
+                        Log.v("none","service不需要更新main，因为page已经做了");
+                      }
+                      else{
+                        //需要修改数据
+                        Log.v("Update","service更新main消息"+content);
+                        ContentValues cvEditMain=new ContentValues();
+                        cvEditMain.put("content",content);
+                        cvEditMain.put("createAt",createAt);
+                        cvEditMain.put("saw",saw2+1);
+                        db.update("main_message",cvEditMain,"master=? and status=1",new String[]{touser});
+                      }
+                    }
+                    else{
+                      Log.v("create","service新增main消息");
+                      //不存在这个人，需要向main_message插入新一条消息
+                      ContentValues cvMainMessage=new ContentValues();
+                      cvMainMessage.put("master",touser);
+                      cvMainMessage.put("relation_user",from.getString("name"));
+                      cvMainMessage.put("relation_user_id",fromuser);
+                      cvMainMessage.put("content",content);
+                      cvMainMessage.put("createAt",createAt);
+                      cvMainMessage.put("saw",0);
+                      cvMainMessage.put("status",1);
+                      cvMainMessage.put("relation_chat_id",id);
+                      db.insert("main_message",null,cvMainMessage);
+                    }
+
                     //发送消息
                     showNotificaitons(from.getString("_id"),from.getString("name"),content);
                   }
                 } catch (JSONException e) {
-                    return;
+                  Log.v("ERROR",e.getStackTrace().toString());
+                  return;
                 }
 
             }
