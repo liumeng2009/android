@@ -92,7 +92,7 @@ public class SocketIOService extends Service {
 
       db = SQLiteDatabase.openOrCreateDatabase(getApplicationContext().getDatabasePath("sfDB.db3"), null);
       //建立users表
-      String users_table = "create table if not exists users(id,name,active,image,token,createAt)";
+      String users_table = "create table if not exists users(id,name,active,image,token,createAt,deviceId)";
       db.execSQL(users_table);
       //建立userinfo表
       String userinfo_table = "create table if not exists userinfo(id,name,image,showInMain)";
@@ -103,9 +103,9 @@ public class SocketIOService extends Service {
       //建立main_message表
       String main_message_table = "create table if not exists main_message(master,relation_user,relation_user_id,content,createAt,saw,status,relation_chat_id)";
       db.execSQL(main_message_table);
-      initUser();
-      initializeSocket();
-      addSocketHandlers();
+      //initUser();
+      //initializeSocket();
+      //addSocketHandlers();
     }
 
     @Override
@@ -123,6 +123,8 @@ public class SocketIOService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         initUser();
+        initializeSocket();
+        addSocketHandlers();
         return START_STICKY;
     }
 
