@@ -123,8 +123,10 @@ public class SocketIOService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         initUser();
-        initializeSocket();
-        addSocketHandlers();
+        if(username!=null&&userid!=null&&username!=""&&userid!="") {
+          initializeSocket();
+          addSocketHandlers();
+        }
         return START_STICKY;
     }
 
