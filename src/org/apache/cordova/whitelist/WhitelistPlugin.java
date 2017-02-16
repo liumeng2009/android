@@ -35,6 +35,7 @@ public class WhitelistPlugin extends CordovaPlugin {
 
     // Used when instantiated via reflection by PluginManager
     public WhitelistPlugin() {
+
     }
     // These can be used by embedders to allow Java-configuration of whitelists.
     public WhitelistPlugin(Context context) {

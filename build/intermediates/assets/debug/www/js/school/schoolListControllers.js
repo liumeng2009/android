@@ -78,7 +78,17 @@ angular.module('schoolListControllers',[])
             if(data.success === 0){
               $SFTools.myToast(data.msg);
             }else{
-
+              $schoolData.list({token:_token.token})
+                .success(function(data){
+                  if(data.success === 0){
+                    $SFTools.myToast(data.msg);
+                  }else{
+                    $scope.schools=data.schools;
+                  }
+                })
+                .error(function(){
+                  $SFTools.myToast('网络连接错误');
+                });
             }
           })
           .error(function(){

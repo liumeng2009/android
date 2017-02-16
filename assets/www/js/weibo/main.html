@@ -1,10 +1,16 @@
 <ion-view view-title="青青晓园">
   <ion-header-bar class="bar-stable bar-dark">
-    <ion-title>晓园</ion-title>
+    <ion-title class="title-left">
+      <span  ng-if="!isOnline"><i class="ion ion-ios-bolt assertive dis-animate"></i></span>
+      <span>{{AppName}}</span>
+      <span ng-if="NewMessageCount>0">({{NewMessageCount}})</span>
+      <span><ion-spinner ng-if="LoadingServer" icon="lines" class="spinner-balanced"></ion-spinner></span>
+    </ion-title>
+    <button class="button ion-android-add"></button>
   </ion-header-bar>
   <ion-content>
     <ion-list id="mainlist">
-      <ion-item ng-repeat="chat in chats" ng-click="openModal('{{chat.userid}}','{{chat.name}}')">
+      <ion-item ng-repeat="chat in chats" ng-dis ng-click="chatWith('{{chat.userid}}','{{chat.name}}')">
         <!--
         <label ng-if="chat.online" class="">
           <img ng-src="chat.to.image" ng-if="chat.to.image">
@@ -17,97 +23,24 @@
         <label>
           <img ng-src="img/avata_128.jpg">
         </label>
+        <!--
         <div class="new-small" ng-if="chat.new!=0&&chat.new>9"></div>
-        <div class="new" ng-if="chat.new!=0&&chat.new<10">{{chat.new | mynum}}</div>
+        -->
+        <div class="new" ng-if="chat.new!=0">{{chat.new | mynum}}</div>
         <div class="right">
           <div class="name">
             {{chat.name}}
-            <div class="date">
+            <div class="date" ng-if="chat.createAt!=0">
               {{chat.createAt | mydate}}
             </div>
           </div>
           <p class="content">
-            <label style="font-size: 10px;line-height: 20px;color:green" ng-if="chat.type==='sending'">[发送中]</label>
+            <label style="font-size: 15px;line-height: 15px;color:green" ng-if="chat.type==='sending'"><i class="icon ion-ios-paperplane balanced"></i></label>
+            <label style="font-size: 15px;line-height: 15px;color:red" ng-if="chat.type==='failed'"><i class="icon ion-information-circled assertive"></i></label>
             {{chat.content}}
           </p>
         </div>
       </ion-item>
     </ion-list>
   </ion-content>
-
-  <script id="templates/modal_add.html" type="text/ng-template">
-    <ion-modal-view>
-      <ion-header-bar align-title="center">
-        <button class="button button-icon icon ion-ios-arrow-left" ng-click="goMain()">
-
-        </button>
-        <ion-title>
-          {{touser.name}}
-      <span ng-if="touser.online" class="chat-avatar">
-      </span>
-      <span ng-if="!touser.online" class="chat-avatar-gray">
-      </span>
-        </ion-title>
-      </ion-header-bar>
-      <ion-content style="background-color: #ebebeb"  delegate-handle="chatScroll">
-        <input id="from" type="hidden" ng-value="from" >
-        <input id="to" type="hidden" ng-value="to" >
-        <ion-list id="incomingChatMessages">
-          <div ng-repeat="messagearea in messages" style="margin-top: 8px">
-            <div class="list-per message-createAt">
-              <span>&nbsp;{{messagearea.createAt|mydate}}&nbsp;</span>
-            </div>
-            <div class="list-per" ng-repeat="message in messagearea.chatlist" >
-              <table style="width:100%" class="{{message.type}}" ng-if="message.type==='to'">
-                <tr>
-                  <td style="vertical-align: top;width:60px;">
-                    <div class="user">
-                      <img class="avatar" ng-src="img/avata_128.jpg" ng-if="message.image">
-                      <img class="avatar" src="img/avata_128.jpg" ng-if="!message.image">
-                    </div>
-                  </td>
-                  <td style="vertical-align: top;word-break: break-all">
-                    <div class="chat">
-                  <span>
-                    {{message.mess}}<br>
-                  </span>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              <table style="width:100%"  class="{{message.type}}" ng-if="message.type==='from'">
-                <tr>
-                  <td style="vertical-align: top;word-break: break-all">
-                    <div class="chat">
-                  <span>
-                    {{message.mess}}<br>
-                    <label style="font-size: 10px;color:green;margin-top: 10px;" ng-if="message.send==='sending'">发送中</label>
-                  </span>
-                    </div>
-                  </td>
-                  <td style="vertical-align: top;width:60px;">
-                    <div class="user">
-                      <img class="avatar" ng-src="img/avata_128.jpg" ng-if="message.image">
-                      <img class="avatar" src="img/avata_128.jpg" ng-if="!message.image">
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </ion-list>
-      </ion-content>
-      <ion-footer-bar>
-        <form role="form" name="chatForm" class="item-input-inset" style="width:100%">
-          <label class="item-input-wrapper">
-            <input style="width:100%" type="text" id="outgoingChatMessage" placeholder="输入信息 ..." ng-value="sendMessage" ng-model="sendMessage" required>
-          </label>
-          <button type="submit" class="button button-balanced" ng-click="send()" ng-disabled="chatForm.$invalid">
-            发送
-          </button>
-        </form>
-      </ion-footer-bar>
-    </ion-modal-view>
-  </script>
-
 </ion-view>

@@ -33,8 +33,24 @@
 }
 .slide-in-left.ng-leave,
 .slide-in-left > .ng-leave {
-  -webkit-transition: all ease-in-out 200ms;
-  transition: all ease-in-out 200ms;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+.tab-badge-red {
+  background-color: red !important;
+  color: #fff !important;
+}
+.login-ico {
+  position: absolute;
+  right: 0px;
+}
+.bar .title.title-left {
+  left: 0px !important;
+}
+.bar-dark .button {
+  border-color: transparent !important;
+  background-color: transparent !important;
+  font-size: 23px !important;
 }
 .avatar-bg {
   height: 175px;
@@ -129,7 +145,9 @@
 }
 #incomingChatMessages .message-createAt {
   text-align: center;
-  margin-bottom: 8px;
+  /*
+    margin-bottom:15px;
+    */
 }
 #incomingChatMessages .message-createAt span {
   background-color: #d4d4d4;
@@ -146,6 +164,7 @@
   width: 60px;
   float: left;
   text-align: center;
+  height: 42px;
 }
 #incomingChatMessages table.to .user img {
   width: 42px;
@@ -160,18 +179,21 @@
   float: left;
   margin-left: 10px;
   max-width: 80%;
+  position: relative;
+  min-height: 34px;
 }
 #incomingChatMessages table.to .chat span {
   display: block;
   width: auto;
   height: auto;
-  padding: 7px 7px;
-  line-height: 20px;
+  padding: 8px 7px;
+  line-height: 26px;
   border-radius: 5px;
   background-color: #fff;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   color: #353535;
+  min-height: 34px;
 }
 #incomingChatMessages table.to .chat label {
   color: #999;
@@ -180,7 +202,7 @@
 #incomingChatMessages table.to .chat span:before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: -13px;
   border-right: 7px #fff solid;
   border-left: 7px transparent solid;
@@ -194,6 +216,7 @@
   width: 60px;
   float: right;
   text-align: center;
+  height: 42px;
 }
 #incomingChatMessages table.from .user img {
   width: 42px;
@@ -208,18 +231,20 @@
   float: right;
   margin-right: 10px;
   max-width: 80%;
+  position: relative;
 }
 #incomingChatMessages table.from .chat span {
   display: block;
   width: auto;
   height: auto;
-  padding: 7px 7px;
-  line-height: 20px;
+  padding: 8px 7px;
+  line-height: 26px;
   border-radius: 5px;
   background-color: #a0e75a;
   color: #353535;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
+  min-height: 34px;
 }
 #incomingChatMessages table.from .chat label {
   color: #999;
@@ -228,16 +253,66 @@
 #incomingChatMessages table.from .chat span:before {
   content: '';
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: -13px;
   border-left: 7px #a0e75a solid;
   border-right: 7px transparent solid;
   border-top: 5px transparent solid;
   border-bottom: 5px transparent solid;
 }
+@keyframes popMove {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-top: 54px;
+  }
+}
+.pop-card {
+  margin-top: 54px;
+  position: relative;
+  z-index: 9;
+  animation: popMove 0.4s;
+  -moz-animation: popMove 0.4s;
+  /* Firefox */
+  -webkit-animation: popMove 0.4s;
+  /* Safari 和 Chrome */
+  -o-animation: popMove 0.4s;
+}
+.pop-card img {
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+.pop-card .right {
+  margin-left: 15px;
+}
+.pop-card .right .name {
+  margin-left: 50px;
+  font-size: 16px;
+  color: #000;
+  line-height: 26px;
+  position: relative;
+}
+.pop-card .right .name .date {
+  float: right;
+  font-size: 12px;
+  color: #8f8f8f;
+  line-height: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.pop-card .right .content {
+  margin-left: 50px;
+  font-size: 14px;
+  color: #8f8f8f;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
 #mainlist .item {
   padding: 10px;
-  background-color: #fefefe;
 }
 #mainlist .item img {
   width: 48px;
@@ -246,16 +321,17 @@
 }
 #mainlist .item .new {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  border-radius: 100%;
+  min-width: 10px;
+  height: 18px;
+  border-radius: 10px;
+  padding: 1px 6px;
   color: #fff;
-  background-color: #ff4d4d;
+  background-color: #444;
   text-align: center;
-  left: 51px;
-  top: 6px;
+  right: 10px;
+  bottom: 13px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 16px;
 }
 #mainlist .item .new-small {
   position: absolute;
@@ -263,7 +339,7 @@
   height: 10px;
   border-radius: 100%;
   color: #fff;
-  background-color: #ff4d4d;
+  background-color: #444;
   text-align: center;
   left: 53px;
   top: 8px;
@@ -293,6 +369,7 @@
   margin-left: 50px;
   font-size: 14px;
   color: #8f8f8f;
+  padding-right: 50px;
 }
 .chat-avatar {
   width: 12px;
@@ -330,4 +407,40 @@
   background-color: transparent;
   line-height: 42px;
   color: #33cd5f;
+}
+.spinner {
+  position: relative;
+}
+.spinner svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+}
+.has-footer {
+  bottom: 57px;
+}
+@keyframes disconnection-animate {
+  from {
+    color: #ef473a;
+  }
+  to {
+    color: transparent;
+  }
+}
+.dis-animate {
+  animation: disconnection-animate 2s;
+  -moz-animation: disconnection-animate 2s;
+  /* Firefox */
+  -webkit-animation: disconnection-animate 2s;
+  /* Safari 和 Chrome */
+  -o-animation: disconnection-animate 2s;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-iteration-count: 999;
+  -webkit-animation-iteration-count: 999;
+  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in;
+}
+.popup-container .popup {
+  background-color: #ffffff;
 }

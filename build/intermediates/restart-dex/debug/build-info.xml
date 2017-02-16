@@ -4,29 +4,47 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="90650311138418" >
+    timestamp="92876965429173" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1595" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="32" />
     <task
         name="verifier"
-        duration="0" />
+        duration="7" />
 
     <artifact
-        location="F:\angularjs\TestTpl\platforms\android\build\outputs\apk\android-debug.apk"
-        type="MAIN" />
+        location="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+        type="DEX" />
 
-    <build timestamp="90650311138418" >
+    <build timestamp="88315429305642" >
         <artifact
             location="F:\angularjs\TestTpl\platforms\android\build\outputs\apk\android-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="92276834669984" >
+        <artifact
+            location="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+            type="DEX" />
+        <artifact
+            location="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="92770984569266" >
+        <artifact
+            location="F:\angularjs\TestTpl\platforms\android\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="92876965429173" >
+        <artifact
+            location="F:\angularjs\TestTpl\platforms\android\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

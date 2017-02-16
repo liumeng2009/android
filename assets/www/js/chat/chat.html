@@ -1,21 +1,33 @@
 <ion-view>
-  <ion-header-bar align-title="center">
+  <ion-header-bar align-title="center" class="bar-stable bar-dark">
     <button class="button button-icon icon ion-ios-arrow-left" ng-click="goMain()">
 
     </button>
     <ion-title>
       {{touser.name}}
-      <span ng-if="touser.online" class="chat-avatar">
-      </span>
-      <span ng-if="!touser.online" class="chat-avatar-gray">
-      </span>
     </ion-title>
   </ion-header-bar>
-  <ion-content style="background-color: #ebebeb"  delegate-handle="chatScroll">
+
+  <!-- 其他人来了消息，做一个浮动弹窗 -->
+  <div class="card pop-card" ng-if="popMessage.show">
+    <div class="item item-text-wrap">
+      <label>
+        <img ng-src="img/avata_128.jpg">
+      </label>
+      <div class="right">
+        <div class="name">
+          {{popMessage.name}}
+        </div>
+        <p class="content">{{popMessage.message}}</p>
+      </div>
+    </div>
+  </div>
+
+  <ion-content style="background-color:#ebebeb;bottom:{{contentBottom}}px;"  delegate-handle="chatScroll">
     <input id="from" type="hidden" ng-value="from" >
     <input id="to" type="hidden" ng-value="to" >
     <ion-list id="incomingChatMessages">
-      <div ng-repeat="messagearea in messages" style="margin-top: 8px">
+      <div ng-repeat="messagearea in messages" style="margin-top: 8px;float:left;width:100%;">
         <div class="list-per message-createAt">
           <span>&nbsp;{{messagearea.createAt|mydate}}&nbsp;</span>
         </div>
@@ -39,12 +51,21 @@
           </table>
           <table style="width:100%"  class="{{message.type}}" ng-if="message.type==='from'">
             <tr>
-              <td style="vertical-align: top;word-break: break-all">
+              <td style="vertical-align: top;word-break: break-all;">
                 <div class="chat">
                   <span>
-                    {{message.mess}}<br>
-                    <label style="font-size: 10px;color:green;margin-top: 10px;" ng-if="message.send==='sending'">发送中</label>
+                    {{message.mess}}
                   </span>
+                  <div style="position: absolute;width: 33px;height: 33px;top: 50%;;left: -33px;">
+                    <ion-spinner icon="ios-small" class="spinner spinner-ios-small" ng-if="message.send==='sending'"></ion-spinner>
+                    <!--
+                    <i style="font-size: 23px" class="icon ion-ios-loop balanced"  ></i>-->
+                    <!--
+                    <i style="position: absolute;height:33px;width:10px;top:-12px;left:-10px;line-height: 30px;text-align: center" class="balanced" ng-if="message.send==='retry'">{{message.retryTime}}</i>
+                    -->
+                    <ion-spinner icon="ios-small" class="spinner spinner-ios-small" ng-if="message.send==='retry'"></ion-spinner>
+                    <i ng-if="message.send==='failed'" style="font-size: 23px;font-size: 23px;position: absolute;top: -12px;" ng-click="clickRetry(message)" class="icon ion-ios-information assertive"></i>
+                  </div>
                 </div>
               </td>
               <td style="vertical-align: top;width:60px;">
@@ -56,17 +77,34 @@
             </tr>
           </table>
         </div>
+        <div style="height:10px;float:left;width:100%;" ng-if="$last">
+
+        </div>
       </div>
     </ion-list>
   </ion-content>
-  <ion-footer-bar>
-      <form role="form" name="chatForm" class="item-input-inset" style="width:100%">
-        <label class="item-input-wrapper">
-          <input style="width:100%" type="text" id="outgoingChatMessage" placeholder="输入信息 ..." ng-value="sendMessage" ng-model="sendMessage" required>
-        </label>
-        <button type="submit" class="button button-balanced" ng-click="send()" ng-disabled="chatForm.$invalid">
-          发送
+  <ion-footer-bar style="height:auto;background: none !important;">
+    <form role="form" name="chatForm" class="item-input-inset" style="width:100%;align-items:{{send.areaPosition}};padding:0px;">
+      <label>
+        <button style="color:#444444;font-size:30px;line-height:45px;" class="button button-large button-clear">
+          <i class="ion-ios-plus-outline"></i>
         </button>
-      </form>
+      </label>
+      <label class="item-input-wrapper" style="background-color: transparent;border-bottom: #a0e75a 1px solid;padding-left:0px;padding-right:0px;align-items:flex-end;">
+        <!--
+        <input style="width:100%;height:39px;" type="text" id="outgoingChatMessage" ng-value="sendMessage" ng-model="sendMessage" required>-->
+        <textarea ng-change="checkHeight()" style="width:100%;height:{{send.boxHeight}}px;resize:none;line-height: {{send.boxLineHeight}}px;font-size:16px;padding-left:10px;padding-right:10px;" id="outgoingChatMessage"  ng-model="send.sendMessage" required></textarea>
+      </label>
+      <label>
+        <button style="color:#444444;font-size:30px;line-height:43px;" type="submit" class="button button-large button-clear">
+          <i class="ion-ios-star-outline"></i>
+        </button>
+      </label>
+      <label style="margin: 0px 10px;">
+        <button style="font-size:43px;line-height: 40px;color:#444" type="submit" class="button button-large button-clear" ng-click="send()">
+          <i class="ion-ios-paperplane-outline"></i>
+        </button>
+      </label>
+    </form>
   </ion-footer-bar>
 </ion-view>

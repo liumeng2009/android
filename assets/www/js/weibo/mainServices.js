@@ -24,6 +24,13 @@ angular.module('mainServices',[])
           url:url,
           method:'GET'
         })
+      },
+      setNewDeviceId:function(requestParams){
+        var url=config.basePath+'chat_set_new_device?token='+requestParams.token+'&userid='+requestParams.userid+'&deviceid='+requestParams.deviceid;
+        return $http({
+          url:url,
+          method:'GET'
+        })
       }
     }
   });

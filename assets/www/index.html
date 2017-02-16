@@ -21,6 +21,8 @@
     <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
 
+    <script scr="../node_modules/requirejs/require.js"></script>
+
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -57,5 +59,6 @@
   </head>
   <body ng-app="starter"  class="platform-android platform-cordova platform-webview">
       <ion-nav-view></ion-nav-view>
+      <div style="display: block;width:auto;position: absolute;font-size:16px;line-height: 20px;" id="testTextWidth"></div>
   </body>
 </html>

@@ -6,10 +6,11 @@ angular.module('loginServices',[])
     return {
       login:function(requestParams){
         var url=config.basePath+'signin?username='+requestParams.username+'&password='+requestParams.password;
+        console.log(url);
         return $http({
           url:url,
           method:'GET'
-        })
+        });
       },
       reg:function(requestParams){
         var url=config.basePath+'signup'
@@ -17,6 +18,14 @@ angular.module('loginServices',[])
           method:'POST',
           url:url,
           data:requestParams
+        })
+      },
+      setDeviceId:function(requestParams){
+        var url=config.basePath+'setdeviceid?deviceType=phone&deviceId='+requestParams.deviceId+'&token='+requestParams.token;
+        console.log(url);
+        return $http({
+          url:url,
+          method:'GET'
         })
       }
     }

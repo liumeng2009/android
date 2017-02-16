@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/actionbar_back"
+  android:layout_height="match_parent"
+  android:layout_width="match_parent"
+  android:background="#333333">
+  <TextView
+    android:drawableLeft="@drawable/ic_action_left_dark"
+    android:drawablePadding="8dp"
+    android:gravity="center_vertical"
+    android:id="@+id/actionbar_discard_textview"
+    android:layout_gravity="center_vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:paddingRight="20dp"
+    android:text="@string/pic"
+    android:textColor="#ffffff"
+    android:textSize="15dp"
+    style="?android:actionBarTabTextStyle" />
+  <include layout="@layout/actionbar_done_button" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_gravity="right" />
+</FrameLayout>

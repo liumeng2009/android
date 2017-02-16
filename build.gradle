@@ -176,7 +176,7 @@ android {
       abortOnError false;
     }
 
-    compileSdkVersion 21
+    compileSdkVersion 23
     buildToolsVersion cdvBuildToolsVersion
 
     if (Boolean.valueOf(cdvBuildMultipleApks)) {
@@ -250,6 +250,7 @@ dependencies {
     debugCompile project(path: "CordovaLib", configuration: "debug")
     releaseCompile project(path: "CordovaLib", configuration: "release")
     compile "com.android.support:support-v4:+"
+    compile "com.android.support:support-v4:24.1.1+"
     // SUB-PROJECT DEPENDENCIES END
     compile 'com.android.support:support-v4:22.2.0'
     compile 'com.android.support:appcompat-v7:22.2.0'
@@ -257,6 +258,8 @@ dependencies {
     compile('io.socket:socket.io-client:0.7.0') {
       exclude group: 'org.json', module: 'json'
     }
+    compile 'com.yalantis:ucrop:2.2.0-native'
+    compile files('libs/MiPush_SDK_Client_3_1_2.jar')
 }
 
 def promptForReleaseKeyPassword() {

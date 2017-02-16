@@ -5,12 +5,13 @@ navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-icon-only tabs-color-active-positive">
   <!-- Dashboard Tab -->
-  <ion-tab title="消息" icon-off="ion-ios-chatbubble-outline" icon-on="ion-ios-chatbubble" href="#/tab/main">
+  <!-- badge-style="tab-badge-red" -->
+  <ion-tab title="消息" icon-off="ion-ios-chatbubble-outline" badge="NewMessageCount"  icon-on="ion-ios-chatbubble" href="#/tab/main">
     <ion-nav-view name="tab-main"></ion-nav-view>
   </ion-tab>
 
   <!-- Chats Tab -->
-  <ion-tab title="孩子" icon-off="ion-ios-paw-outline" icon-on="ion-ios-paw" href="#/tab/children">
+  <ion-tab title="联系人" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/tab/children">
     <ion-nav-view name="tab-children"></ion-nav-view>
   </ion-tab>
 
@@ -19,3 +20,92 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-usercenter"></ion-nav-view>
   </ion-tab>
 </ion-tabs>
+
+<script id="templates/modal_add.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar align-title="center">
+      <button class="button button-icon icon ion-ios-arrow-left" ng-click="closeModal()">
+
+      </button>
+      <ion-title>
+        {{touser.name}}
+      </ion-title>
+    </ion-header-bar>
+
+    <!-- 其他人来了消息，做一个浮动弹窗 -->
+    <div class="card pop-card" ng-if="popMessage.show">
+      <div class="item item-text-wrap">
+        <label>
+          <img ng-src="img/avata_128.jpg">
+        </label>
+        <div class="right">
+          <div class="name">
+            {{popMessage.name}}
+          </div>
+          <p class="content">{{popMessage.message}}</p>
+        </div>
+      </div>
+    </div>
+
+    <ion-content style="background-color: #ebebeb"  delegate-handle="chatScroll">
+      <input id="from" type="hidden" ng-value="from" >
+      <input id="to" type="hidden" ng-value="to" >
+      <ion-list id="incomingChatMessages">
+        <div ng-repeat="messagearea in messages" style="margin-top: 8px">
+          <div class="list-per message-createAt">
+            <span>&nbsp;{{messagearea.createAt|mydate}}&nbsp;</span>
+          </div>
+          <div class="list-per" ng-repeat="message in messagearea.chatlist" >
+            <table style="width:100%" class="{{message.type}}" ng-if="message.type==='to'">
+              <tr>
+                <td style="vertical-align: top;width:60px;">
+                  <div class="user">
+                    <img class="avatar" ng-src="img/avata_128.jpg" ng-if="message.image">
+                    <img class="avatar" src="img/avata_128.jpg" ng-if="!message.image">
+                  </div>
+                </td>
+                <td style="vertical-align: top;word-break: break-all">
+                  <div class="chat">
+                  <span>
+                    {{message.mess}}<br>
+                  </span>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <table style="width:100%"  class="{{message.type}}" ng-if="message.type==='from'">
+              <tr>
+                <td style="vertical-align: top;word-break: break-all">
+                  <div class="chat">
+                  <span>
+                    {{message.mess}}<br>
+                    <label style="font-size: 10px;color:green;margin-top: 10px;" ng-if="message.send==='sending'">发送中</label>
+                    <label style="font-size: 10px;color:green;margin-top: 10px;" ng-if="message.send==='retry'">第{{message.retryTime}}次重新发送</label>
+                    <label style="font-size: 10px;color:green;margin-top: 10px;" ng-if="message.send==='failed'" ng-click="clickRetry(message)" ><i class="icon ion-information-circled assertive"></i>重试发送</label>
+                  </span>
+                  </div>
+                </td>
+                <td style="vertical-align: top;width:60px;">
+                  <div class="user">
+                    <img class="avatar" ng-src="img/avata_128.jpg" ng-if="message.image">
+                    <img class="avatar" src="img/avata_128.jpg" ng-if="!message.image">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </ion-list>
+    </ion-content>
+    <ion-footer-bar>
+      <form role="form" name="chatForm" class="item-input-inset" style="width:100%">
+        <label class="item-input-wrapper">
+          <input style="width:100%" type="text" id="outgoingChatMessage" placeholder="输入信息 ..." ng-value="send.sendMessage" ng-model="send.sendMessage" required>
+        </label>
+        <button type="submit" class="button button-balanced" ng-click="send()" ng-disabled="chatForm.$invalid">
+          发送
+        </button>
+      </form>
+    </ion-footer-bar>
+  </ion-modal-view>
+</script>

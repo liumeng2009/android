@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','starter.filters','starter.directives','ionic-native-transitions'])
 
-.run(function($ionicPlatform,$SFTools) {
+.run(function($ionicPlatform,$SFTools,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -16,32 +16,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
       cordova.plugins.Keyboard.disableScroll(true);
 
     }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
   });
-  TIME_SPACING=5;
   iosocket='';
-  token='';
-  $SFTools.getToken(function(_token){
-    if(_token&&_token.userid&&_token!='') {
-      iosocket = io.connect('http://liumeng.iego.cn/', {'reconnect': true});
-      iosocket.on('connect', function () {
-        console.log('连接了，不知道是重新连还是直接连，username是' + _token.name + ',_id是' + _token.userid);
-        if (_token.name != '' && _token.userid != '') {
-          iosocket.emit('login', {
-            name: _token.name,
-            _id: _token.userid,
-            type: 'page'
-          });
-        }
-      });
-    }
-    else{
-
-    }
-  });
+  isFirstLoad=true;
 })
 
 .config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$sceDelegateProvider,$ionicNativeTransitionsProvider) {
@@ -74,6 +51,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     // Allow same origin resource loads.
     'self',
     'http://127.0.0.1:3000',
+    'http://liumeng.iego.cn',
     // Allow loading from our assets domain.  Notice the difference between * and **.
     'http://media.w3.org/**']);
   $ionicConfigProvider.views.transition('ios');
@@ -128,7 +106,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
       params:{redirectUrl:null},
       nativeTransitions: {
         "type": "slide",
-        "direction": "up",
+        "direction": "left",
         "duration":400
       }
     })
