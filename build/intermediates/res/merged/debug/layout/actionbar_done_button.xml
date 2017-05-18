@@ -15,25 +15,34 @@
   -->
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?android:actionButtonStyle"
     android:id="@+id/actionbar_done"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:paddingRight="10dp"
   >
-
-    <TextView style="?android:actionBarTabTextStyle"
-        android:id="@+id/actionbar_done_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingRight="15dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="7dp"
-        android:paddingBottom="7dp"
-        android:gravity="center_vertical"
-        android:text="确定"
-        android:textColor="@color/actionbar_done_text_selector"
-        android:background="@drawable/corners_bg"
-      />
+  <TextView style="?android:actionBarTabTextStyle"
+    android:id="@+id/actionbar_done_textview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:width="60dp"
+    android:height="35dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:text="@string/done"
+    android:textSize="16dp"
+    android:textColor="@color/actionbar_done_text_selector"
+    android:background="@drawable/corners_bg"
+    android:layout_marginBottom="7dp"
+    />
+  <com.victor.loading.rotate.RotateLoading
+    android:id="@+id/rotateloading"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_gravity="right|center_vertical"
+    android:layout_marginRight="13dp"
+    android:layout_marginBottom="7dp"
+    app:loading_speed="11"
+    app:loading_width="2dp" />
 </FrameLayout>

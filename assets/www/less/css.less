@@ -61,6 +61,32 @@
   background: url(../img/avatar-bg.jpg) no-repeat center center;
   position:relative;
   text-align: center;
+  .avatar-percent-modal{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 3;
+    background-color: #000000;
+    opacity: 0.4;
+    top: 0px;
+    left: 50%;
+    margin-left: -40px;
+  }
+  .avatar-percent{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 4;
+    top: 0px;
+    left: 50%;
+    margin-left: -40px;
+    color:#ffffff;
+    line-height:80px;
+  }
   .avatar{
     width:80px;
     height:80px;
@@ -326,7 +352,7 @@
 }
 #mainlist{
   .item{
-    padding:10px;
+    padding:5px;
     .offline{
       img{
 
@@ -336,6 +362,7 @@
     img{
       width:48px;
       height:48px;
+      margin-top:5px;
       float:left;
     }
     .new{
@@ -371,7 +398,7 @@
         margin-left: 50px;
         font-size: 16px;
         color:#000;
-        line-height: 26px;
+        line-height: 36px;
         position:relative;
         .date{
           float:right;

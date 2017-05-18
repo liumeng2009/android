@@ -41,7 +41,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_layout_scale_wheel.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_layout_scale_wheel.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_layout_scale_wheel.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -53,7 +53,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_layout_rotate_wheel.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_layout_rotate_wheel.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_layout_rotate_wheel.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
@@ -77,7 +77,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_controls.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_controls.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_controls.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
@@ -89,7 +89,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_activity_photobox.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_activity_photobox.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_activity_photobox.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -109,7 +109,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_aspect_ratio.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_aspect_ratio.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_aspect_ratio.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
@@ -133,7 +133,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\ucrop_view.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\layout\\ucrop_view.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\layout\\ucrop_view.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
@@ -146,6 +146,10 @@
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\newton_cradle_loading.xml",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.victor\\lib\\1.0.4\\res\\layout\\newton_cradle_loading.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -182,6 +186,14 @@
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\activity_image_zoom.xml",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\layout\\activity_image_zoom.xml"
+    },
+    {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\book_loading.xml",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.victor\\lib\\1.0.4\\res\\layout\\book_loading.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",

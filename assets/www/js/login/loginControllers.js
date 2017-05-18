@@ -60,7 +60,7 @@ angular.module('loginControllers',[])
             db = window.sqlitePlugin.openDatabase({name: data.user._id+'.db3', location: 'default'});
             var uuid=$cordovaDevice.getUUID();
             console.log(uuid);
-            db.executeSql('create table if not exists users(id,name,active,image,token,createAt,deviceId)');
+            db.executeSql('create table if not exists users(id,name,active,image,imageurl,token,createAt,deviceId)');
             db.executeSql('select count(*) AS mycount from users where id=?', [data.user._id], function (rs) {
               var count = rs.rows.item(0).mycount;
               if (count > 0) {
@@ -73,7 +73,7 @@ angular.module('loginControllers',[])
               if (exist) {
                 db.transaction(function (tx) {
                   tx.executeSql('update users set active=0');
-                  tx.executeSql('update users set name=?,token=?,image=?,active=1 where id=?', [data.user.name, data.user.token, data.user.image, data.user._id],function(){
+                  tx.executeSql('update users set name=?,token=?,image=?,imageurl=?,active=1 where id=?', [data.user.name, data.user.token, data.user.image,data.user.imageUrl, data.user._id],function(){
 
                   });
                 },function(error){
@@ -87,7 +87,7 @@ angular.module('loginControllers',[])
                   tx.executeSql('update users set active=0');
                   var ts = new Date();
                   var deviceid=uuid+' '+ts.getTime();
-                  tx.executeSql('insert into users values(?,?,?,?,?,?,?)', [data.user._id, data.user.name, 1, data.user.image, data.user.token, ts.getTime(),deviceid],function(){
+                  tx.executeSql('insert into users values(?,?,?,?,?,?,?,?)', [data.user._id, data.user.name, 1, data.user.image,data.user.imageUrl, data.user.token, ts.getTime(),deviceid],function(){
 
                   });
                 },function(error){
@@ -98,7 +98,7 @@ angular.module('loginControllers',[])
               }
             });
             //同时更新一下用户信息
-            db.executeSql('create table if not exists userinfo(id,name,image,showInMain)');
+            db.executeSql('create table if not exists userinfo(id text primary key not null unique ,name,image,imageurl,showInMain)');
             db.executeSql('select count(*) as mycount from userinfo where id=?',[data.user._id],function(rs){
               var count = rs.rows.item(0).mycount;
               if (count > 0) {
@@ -109,12 +109,12 @@ angular.module('loginControllers',[])
               }
               if (exist) {
                 db.transaction(function (tx) {
-                  tx.executeSql('update userinfo set name=?,image=? id=?', [data.user.name, data.user.image, data, user._id]);
+                  tx.executeSql('update userinfo set name=?,image=?,imageurl=? where id=?', [data.user.name, data.user.image,data.user.imageUrl, data, user._id]);
                 });
               }
               else {
                 db.transaction(function (tx) {
-                  tx.executeSql('insert into userinfo values(?,?,?,?)', [data.user._id, data.user.name,data.user.image,1]);
+                  tx.executeSql('insert into userinfo values(?,?,?,?,?)', [data.user._id, data.user.name,data.user.image,data.user.imageUrl,1]);
                 });
               }
             })

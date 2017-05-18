@@ -2,4 +2,6 @@
 <resources>
   <color name="c1">#ff0606</color>
   <color name="c2">#ff0606</color>
+  <color name="ucrop_color_toolbar">#333333</color>
+  <color name="ucrop_color_statusbar">#000000</color>
 </resources>

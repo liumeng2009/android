@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi-v4\\t1.png",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\drawable-port-mdpi\\t1.png"
+    },
+    {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi-v4\\screen.png",
         "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\drawable-port-mdpi\\screen.png"
     }

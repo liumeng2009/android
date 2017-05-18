@@ -58,6 +58,32 @@
   position: relative;
   text-align: center;
 }
+.avatar-bg .avatar-percent-modal {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 3;
+  background-color: #000000;
+  opacity: 0.4;
+  top: 0px;
+  left: 50%;
+  margin-left: -40px;
+}
+.avatar-bg .avatar-percent {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin-top: 20px;
+  position: absolute;
+  z-index: 4;
+  top: 0px;
+  left: 50%;
+  margin-left: -40px;
+  color: #ffffff;
+  line-height: 80px;
+}
 .avatar-bg .avatar {
   width: 80px;
   height: 80px;
@@ -312,11 +338,12 @@
   overflow: hidden;
 }
 #mainlist .item {
-  padding: 10px;
+  padding: 5px;
 }
 #mainlist .item img {
   width: 48px;
   height: 48px;
+  margin-top: 5px;
   float: left;
 }
 #mainlist .item .new {
@@ -353,7 +380,7 @@
   margin-left: 50px;
   font-size: 16px;
   color: #000;
-  line-height: 26px;
+  line-height: 36px;
   position: relative;
 }
 #mainlist .item .right .name .date {

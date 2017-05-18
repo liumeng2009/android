@@ -37,6 +37,7 @@
 
     <application
         android:name="com.ionicframework.testtpl199249.DemoApplication"
+        android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"

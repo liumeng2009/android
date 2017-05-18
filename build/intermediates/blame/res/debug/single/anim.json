@@ -29,7 +29,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\anim\\ucrop_loader_circle_scale.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\anim\\ucrop_loader_circle_scale.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\anim\\ucrop_loader_circle_scale.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -49,6 +49,6 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\anim\\ucrop_loader_circle_path.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\anim\\ucrop_loader_circle_path.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\anim\\ucrop_loader_circle_path.xml"
     }
 ]

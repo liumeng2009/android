@@ -1,8 +1,10 @@
 <ion-view view-title="个人中心">
   <ion-content>
     <div class="avatar-bg">
-      <img class="avatar" src="" ng-if="user.image" ng-model="user.image" ng-click="changeAvatar()" >
+      <img class="avatar" ng-if="user.image" ng-src="{{user.image}}" ng-click="changeAvatar()" >
       <img class="avatar" src="img/avata_128.jpg" ng-if="!user.image" ng-click="changeAvatar()" >
+      <div class="avatar-percent-modal" ng-if="uploader.show">5555</div>
+      <div class="avatar-percent"  ng-if="uploader.show">{{uploadProcessPercent}}</div>
       <h3 class="username" ng-if="user" ng-model="user.name">
         {{user.name}}
       </h3>
@@ -22,6 +24,7 @@
       <a class="item item-icon-left" href="#">
           <i class="icon ion-ios-email-outline"></i>
           消息中心
+        <!--{{uploadProcessPercent}}-->
       </a>
       <a class="item-icon-left item" href="/#/login" ng-if="!user">
           <i class="icon ion-ios-people-outline"></i>

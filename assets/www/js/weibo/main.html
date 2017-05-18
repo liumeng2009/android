@@ -20,7 +20,10 @@
           <img ng-src="chat.to.image" ng-if="chat.to.image">
           <img ng-src="../../img/avata_128.jpg" ng-if="!chat.to.image">
         </label>-->
-        <label>
+        <label ng-if="chat.image&&chat.image!='undefined'">
+          <img ng-src="{{chat.image}}">
+        </label>
+        <label ng-if="!chat.image||chat.image=='undefined'">
           <img ng-src="img/avata_128.jpg">
         </label>
         <!--
@@ -37,7 +40,8 @@
           <p class="content">
             <label style="font-size: 15px;line-height: 15px;color:green" ng-if="chat.type==='sending'"><i class="icon ion-ios-paperplane balanced"></i></label>
             <label style="font-size: 15px;line-height: 15px;color:red" ng-if="chat.type==='failed'"><i class="icon ion-information-circled assertive"></i></label>
-            {{chat.content}}
+            <span ng-if="chat.content=='[\image\]'">[图片]</span>
+            <span ng-if="chat.content!='[\image\]'">{{chat.content}}</span>
           </p>
         </div>
       </ion-item>

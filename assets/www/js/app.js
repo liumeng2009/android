@@ -52,6 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     'self',
     'http://127.0.0.1:3000',
     'http://liumeng.iego.cn',
+    'http://g151082j77.iok.la',
     // Allow loading from our assets domain.  Notice the difference between * and **.
     'http://media.w3.org/**']);
   $ionicConfigProvider.views.transition('ios');

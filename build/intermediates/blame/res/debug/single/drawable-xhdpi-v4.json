@@ -33,7 +33,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_cross.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_cross.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_cross.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -109,15 +109,15 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_reset.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_reset.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_reset.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_scale.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_scale.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_scale.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_done.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_done.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_done.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -161,11 +161,11 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_rotate.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_rotate.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_rotate.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_angle.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_angle.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_angle.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
@@ -181,7 +181,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_next.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_next.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_next.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
@@ -213,7 +213,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ucrop_ic_crop.png",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable-xhdpi-v4\\ucrop_ic_crop.png"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable-xhdpi-v4\\ucrop_ic_crop.png"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\abc_ic_star_black_48dp.png",

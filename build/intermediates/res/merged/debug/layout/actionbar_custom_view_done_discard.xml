@@ -18,7 +18,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:divider="?android:attr/dividerVertical"
+    android:showDividers="middle"
     android:background="#333333"
-  >
+    android:dividerPadding="12dp">
+
     <include layout="@layout/actionbar_back_button_layout"  />
 </LinearLayout>

@@ -9,6 +9,6 @@
     <string name="maximum_selection_count_error_header">Limit reached</string>
     <string name="maximum_selection_count_error_message">You can only select %d photos at once.</string>
     <string name="discard">Cancel</string>
-    <string name="done">OK</string>
-    <string name="pic">请选择图片</string>
+    <string name="done">确定</string>
+    <string name="pic">图片</string>
 </resources>

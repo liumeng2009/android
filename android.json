@@ -91,6 +91,10 @@
                         {
                             "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"MyMath\"><param name=\"android-package\" value=\"com.liumeng.MyMath\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -238,6 +242,9 @@
             "PACKAGE_NAME": "com.ionicframework.testtpl199249"
         },
         "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.testtpl199249"
+        },
+        "SimpleMath": {
             "PACKAGE_NAME": "com.ionicframework.testtpl199249"
         }
     },
@@ -632,6 +639,14 @@
             "clobbers": [
                 "CameraPopoverHandle"
             ]
+        },
+        {
+            "id": "SimpleMath.MyMath",
+            "file": "plugins/SimpleMath/www/MyMath.js",
+            "pluginId": "SimpleMath",
+            "clobbers": [
+                "cordova.plugins.MyMath"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -656,6 +671,7 @@
         "cordova-plugin-file-transfer": "1.6.1",
         "org.pbernasconi.progressindicator": "1.1.0",
         "info.protonet.imageresizer": "0.1.1",
-        "cordova-plugin-camera": "2.3.1"
+        "cordova-plugin-camera": "2.3.1",
+        "SimpleMath": "1.0.0"
     }
 }

@@ -1,3 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.yalantis\ucrop\2.2.0-native\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="24497dd7ccdf848dde14335011e715dcc1110275">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.yalantis-ucrop-2.2.0-native_c6f3294a69fe5efdd580bd9d2d92adfb82208b12.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_07b13c76bda2671497725877625b00cd8b5dd1d5.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.0_7af5630b67a8d3ca0540f6249c93c72d2f0a2284.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_bc15963564d753a571ea98b77fa04368b2dcec01.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\io.socket\engine.io-client\0.7.0\c1b1d30e2d2231b2eae1438a44943a409b976dac\engine.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="c1b1d30e2d2231b2eae1438a44943a409b976dac">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\engine.io-client-0.7.0_b5f008f846f5bcb5868b717d29cf3c68077ab20c.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okio-1.9.0_31db6e0d6b59d2bfab6e8c665e368540843d86de.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_d0c179f41b148e4e0d544adecb9e7d4d2e96e1bb.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\libs\MiPush_SDK_Client_3_1_2.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="be4a7a20473c8e53375e59bef1af1bccaf1a7276">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\MiPush_SDK_Client_3_1_2_e368a1107d2243ddec879d2b3b6e619c4f40c5ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_457d7d5983e88b25664387c6e432258f38478220.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="11c507df305ffe38d8cc10792dd9ce599a38d8b6">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\CordovaLib-unspecified-debug_92f72735e427460f64e60d57f46528807d62e804.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_5e0632e2b6ee79ec0543a991ead2e8ad6caa536b.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\libs\sqlite-connector.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="76169ab23a4f939925491c6fe186749da5a56ee9">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\sqlite-connector_6d7044c8839871df14c4b0a47569d1a639e589c6.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_431cf425af65fd2f2b40c04cb159d79e72326639.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.victor\lib\1.0.4\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="8b534207608aa1c205263d7426e634872ae34f08">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.victor-lib-1.0.4_75e98a19cb983eb3245f258363798ec773d18970.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-22.2.0_240dab83a6f1bfd1703f745ff7001ce3afbeb169.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okhttp-3.4.1_d69c581419846c52423aa1561a716181522e36cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\io.socket\socket.io-client\0.7.0\ce278c97bc9f74c7945d647f6d441d6013163362\socket.io-client-0.7.0.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="ce278c97bc9f74c7945d647f6d441d6013163362">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\socket.io-client-0.7.0_79b672786d02191098da57936717dd06129d5fbe.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.0_844db3a0244f4970e43597b63439d83aecedbb5e.jar" />
+    </item>
+    <item
+        jar="C:\Users\liumeng\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp-ws\3.0.1\bd9b51a0188fc8f14bf840a0d326755545206116\okhttp-ws-3.0.1.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="bd9b51a0188fc8f14bf840a0d326755545206116">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\okhttp-ws-3.0.1_16677c01e7e5824c9cc2c91798614396aa6380e0.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.0_009de905d0cab32bfd8ec78f742de1bb77c73d29.jar" />
+    </item>
+    <item
+        jar="F:\angularjs\TestTpl\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="F:\angularjs\TestTpl\platforms\android\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_8543f766a4b410fef3645fdabffd18a3130ce029.jar" />
+    </item>
+
+</items>

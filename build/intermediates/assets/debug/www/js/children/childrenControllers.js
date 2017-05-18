@@ -47,8 +47,16 @@ angular.module('childrenControllers',[])
                 if($scope.studentnow!=0){
                   $childrenData.chat_list({token:_token.token,studentid:$scope.studentnow._id})
                     .success(function(data){
+                      for(var i=0;i<data.users.length;i++){
+                        //alert('比较：'+data.users[i]._id+'和'+_token.userid);
+                        if(data.users[i]._id===_token.userid){
+                          data.users.splice(i,1);
+                          break;
+                        }
+                      }
                       $scope.users=data.users;
                       //alert('这个用户的孩子是：'+data.users[0].sons[0].name);
+                      //alert('结果是：'+JSON.stringify(data.users));
                     })
                     .error(function(){
                       $SFTools.myToast('网络连接错误');
@@ -221,6 +229,10 @@ angular.module('childrenControllers',[])
         $SFTools.myToast('welcome to XiaoYuan IM!');
       }
     }
+    $scope.alertP=function(event){
+      alert(123);
+      event.stopPropagation();
+    }
     $scope.select_student=function(id){
       $SFTools.getToken(function(_token){
         if(_token&&_token.userid&&_token!='') {
@@ -230,6 +242,13 @@ angular.module('childrenControllers',[])
               $window.localStorage.studentnow=id.toString();
               $childrenData.chat_list({token: _token.token, studentid: id})
                 .success(function (data) {
+                  for(var i=0;i<data.users.length;i++){
+                    alert('比较：'+data.users[i]._id+'和'+_token.userid);
+                    if(data.users[i]._id===_token.userid){
+                      data.users.remove(i);
+                      break;
+                    }
+                  }
                   $scope.users = data.users;
                 })
                 .error(function () {

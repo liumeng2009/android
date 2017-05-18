@@ -2,5 +2,9 @@
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\screen.png",
         "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi-v4\\t1.png",
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\res\\drawable-land-ldpi\\t1.png"
     }
 ]

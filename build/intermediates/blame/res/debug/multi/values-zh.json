@@ -11,7 +11,7 @@
                     "endOffset": 104
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\values-zh\\values-zh.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 158
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\values-zh\\values-zh.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 205
                 },
                 "from": {
-                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\values-zh\\values-zh.xml",
+                    "file": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

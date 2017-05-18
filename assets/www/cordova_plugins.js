@@ -389,6 +389,14 @@ module.exports = [
         "clobbers": [
             "CameraPopoverHandle"
         ]
+    },
+    {
+        "id": "SimpleMath.MyMath",
+        "file": "plugins/SimpleMath/www/MyMath.js",
+        "pluginId": "SimpleMath",
+        "clobbers": [
+            "cordova.plugins.MyMath"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -415,7 +423,8 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.6.1",
     "org.pbernasconi.progressindicator": "1.1.0",
     "info.protonet.imageresizer": "0.1.1",
-    "cordova-plugin-camera": "2.3.1"
+    "cordova-plugin-camera": "2.3.1",
+    "SimpleMath": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

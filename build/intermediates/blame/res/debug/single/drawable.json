@@ -45,7 +45,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\ucrop_shadow_upside.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable\\ucrop_shadow_upside.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable\\ucrop_shadow_upside.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\ucrop_vector_ic_crop.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable\\ucrop_vector_ic_crop.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable\\ucrop_vector_ic_crop.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\grid_background.xml",
@@ -85,7 +85,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\ucrop_vector_loader.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable\\ucrop_vector_loader.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable\\ucrop_vector_loader.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\ucrop_vector_loader_animated.xml",
-        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0\\res\\drawable\\ucrop_vector_loader_animated.xml"
+        "source": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\exploded-aar\\com.yalantis\\ucrop\\2.2.0-native\\res\\drawable\\ucrop_vector_loader_animated.xml"
     },
     {
         "merged": "F:\\angularjs\\TestTpl\\platforms\\android\\build\\intermediates\\res\\merged\\debug\\drawable\\__picker_camera.xml",

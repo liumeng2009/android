@@ -6,6 +6,7 @@ angular.module('mainServices',[])
     return {
       not_read_list:function(requestParams){
         var url=config.basePath+'chat_not_read_list?token='+requestParams.token;
+        console.log(url);
         return $http({
           url:url,
           method:'GET'
